@@ -149,14 +149,14 @@ namespace Added_Traffic_Redux
 		public static Vector4 GetRoadSidePointWithHeading(this Vector3 pos)
 		{
 			OutputArgument outV = new OutputArgument(), outH = new OutputArgument();
-			// GTA.Native.Function.Call<bool>(&HA0F8A7517A273C05UL, pos.X, pos.Y, pos.Z, outH, outV);
+			GTA.Native.Function.Call<bool>((Hash)0xA0F8A7517A273C05UL, pos.X, pos.Y, pos.Z, outH, outV);
 			return new Vector4(outV.GetResult<Vector3>(), outH.GetResult<float>());
 		}
 
 		public static Vector3 GetPointOnRoadSide(this Vector3 pos)
 		{
 			var output = new OutputArgument();
-			// GTA.Native.Function.Call<bool>(&H16F46FB18C8009E4, pos.X, pos.Y, pos.Z, -1, output);
+			GTA.Native.Function.Call<bool>((Hash)0x16F46FB18C8009E4, pos.X, pos.Y, pos.Z, -1, output);
 			return output.GetResult<Vector3>();
 		}
 
