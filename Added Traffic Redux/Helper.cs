@@ -18,10 +18,10 @@ namespace Added_Traffic_Redux
 		public static Random rdVehicle, rdColor, rdMod, rdSpawn, rdSwap, rdWheel;
 		public static DateTime Now1 = DateTime.Now;
 		public static DateTime Now2 = DateTime.Now;
-		public static DateTime XMLFileDate = File.GetLastWriteTime(".\\scripts\\AddedTrafficRedux.xml");
+		public static DateTime XMLFileDate = File.GetLastWriteTime(@".\scripts\Added Traffic Redux.xml");
 
 		// Settings
-		public static Settings config = new Settings(".\\scripts\\AddedTrafficRedux.xml").Instance;
+		public static Settings config = new Settings(@".\scripts\Added Traffic Redux.xml").Instance;
 		public static WaitTime waitTime = new WaitTime(15, 10, 15, 10, 5);
 		public static float cruiseSpeed = 20.0f;
 		public static float spawnDistance = 150.0f;
@@ -74,9 +74,9 @@ namespace Added_Traffic_Redux
 
 		public static void CreateConfig()
 		{
-			if (!File.Exists(".\\scripts\\AddedTrafficRedux.xml"))
+			if (!File.Exists(@".\scripts\Added Traffic Redux.xml"))
 			{
-				config.FileName = ".\\scripts\\AddedTrafficRedux.xml";
+				config.FileName = @".\scripts\Added Traffic Redux.xml";
 				config.Save();
 			}
 		}

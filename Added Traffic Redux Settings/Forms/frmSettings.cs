@@ -239,9 +239,9 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 		private void frmSettings_Load(object sender, EventArgs e)
 		{
-			if (File.Exists(@".\AddedTrafficRedux.xml"))
+			if (File.Exists(@".\Added Traffic Redux.xml"))
 			{
-				var settings = new Settings(@".\AddedTrafficRedux.xml").Instance;
+				var settings = new Settings(@".\Added Traffic Redux.xml").Instance;
 
 				nudMorning.Value = settings.WaitTime.Morning;
 				nudAfternoon.Value = settings.WaitTime.Afternoon;
@@ -364,11 +364,11 @@ namespace Added_Traffic_Redux_Settings.Forms
 			}
 			else
 			{
-				var result = MessageBox.Show($"AddedTrafficRedux.xml not found, do you want to create it?", "File Not Found", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+				var result = MessageBox.Show($"Added Traffic Redux.xml not found, do you want to create it?", "File Not Found", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 				if (result == DialogResult.Yes)
 				{
-					var settings = new Settings(@".\AddedTrafficRedux.xml").Instance;
-					settings.FileName = @".\AddedTrafficRedux.xml";
+					var settings = new Settings(@".\Added Traffic Redux.xml").Instance;
+					settings.FileName = @".\Added Traffic Redux.xml";
 					settings.Save();
 
 					nudMorning.Value = settings.WaitTime.Morning;
@@ -495,7 +495,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
-			var newSetting = new Settings(@".\AddedTrafficRedux.xml");
+			var newSetting = new Settings(@".\Added Traffic Redux.xml");
 			newSetting.WaitTime = new WaitTime((int)nudMorning.Value, (int)nudAfternoon.Value, (int)nudEvening.Value, (int)nudNight.Value, (int)nudMidnight.Value);
 			newSetting.CruiseSpeed = (float)nudCruiseSpeed.Value;
 			newSetting.SpawnDistance = (float)nudSpawnDistance.Value;

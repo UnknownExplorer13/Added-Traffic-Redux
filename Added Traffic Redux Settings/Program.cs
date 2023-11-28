@@ -15,7 +15,7 @@ namespace Added_Traffic_Redux_Settings
 		public static void Main()
 		{
 			Application.EnableVisualStyles();
-			// Application.SetCompatibleTextRenderingDefault(false);
+			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new frmSettings());
 		}
 	}

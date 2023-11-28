@@ -73,12 +73,12 @@ namespace Added_Traffic_Redux
 				}
 			}
 
-			if (File.GetLastWriteTime(".\\scripts\\AddedTrafficRedux.xml") != Helper.XMLFileDate)
+			if (File.GetLastWriteTime(@".\scripts\Added Traffic Redux.xml") != Helper.XMLFileDate)
 			{
 				UI.Notify($"Added Traffic Redux settings refreshed.");
-				Helper.config = new Settings(".\\scripts\\AddedTrafficRedux.xml").Instance;
+				Helper.config = new Settings(@".\scripts\Added Traffic Redux.xml").Instance;
 				Helper.LoadSettings();
-				Helper.XMLFileDate = File.GetLastWriteTime(".\\scripts\\AddedTrafficRedux.xml");
+				Helper.XMLFileDate = File.GetLastWriteTime(@".\scripts\Added Traffic Redux.xml");
 			}
 		}
 
