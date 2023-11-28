@@ -43,6 +43,8 @@ namespace Added_Traffic_Redux
 		public static int maxVehicles = 10;
 		public static bool debugText;
 
+		public static List<string> noUpgradeClasses = new List<string> { "Commercial", "Emergency", "Industrial", "Military", "Service", "Utility" };
+
 		public static void LoadSettings()
 		{
 			CreateConfig();
@@ -181,7 +183,7 @@ namespace Added_Traffic_Redux
 							veh.Delete();
 
 							if (!randomizeColor) newveh.PaintVehicle();
-							if (enableUpgrade)
+							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
 								int chance = rdMod.Next(0, 100);
@@ -295,7 +297,7 @@ namespace Added_Traffic_Redux
 							veh.Delete();
 
 							if (!randomizeColor) newveh.PaintVehicle();
-							if (enableUpgrade)
+							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
 								int chance = rdMod.Next(0, 100);
@@ -395,7 +397,7 @@ namespace Added_Traffic_Redux
 							veh.Delete();
 
 							if (!randomizeColor) newveh.PaintVehicle();
-							if (enableUpgrade)
+							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
 								int chance = rdMod.Next(0, 100);
@@ -518,8 +520,9 @@ namespace Added_Traffic_Redux
 				veh.EngineRunning = true;
 				veh.IsPersistent = false;
 				veh.SetVehicleIsSpawnByMod();
+
 				if (!randomizeColor) veh.PaintVehicle();
-				if (enableUpgrade)
+				if (enableUpgrade && !noUpgradeClasses.Contains(veh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 				{
 					rdMod = new Random();
 					int chance = rdMod.Next(0, 100);
@@ -622,8 +625,9 @@ namespace Added_Traffic_Redux
 				veh.LockStatus = VehicleLockStatus.CanBeBrokenInto;
 				veh.NeedsToBeHotwired = true;
 				veh.SetVehicleIsSpawnByMod();
+
 				if (!randomizeColor) veh.PaintVehicle();
-				if (enableUpgrade)
+				if (enableUpgrade && !noUpgradeClasses.Contains(veh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 				{
 					rdMod = new Random();
 					int chance = rdMod.Next(0, 100);
