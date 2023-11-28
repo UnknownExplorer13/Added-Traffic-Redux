@@ -716,7 +716,7 @@ namespace Added_Traffic_Redux
 			rdColor = new Random();
 			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255));
 			veh.WindowTint = VehicleWindowTint.None;
-			// veh.XenonLightsColor(rdColor.Next(0, 11));
+			veh.XenonLightsColor((NewFunc.eXenonColor)rdColor.Next(0, 12));
 			if (IsNitroModInstalled()) veh.SetBool(nitroModDecor, true);
 		}
 
@@ -776,124 +776,28 @@ namespace Added_Traffic_Redux
 			rdColor = new Random();
 			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255));
 			veh.WindowTint = VehicleWindowTint.None;
-			// veh.XenonLightsColor(rdColor.Next(0, 11));
+			veh.XenonLightsColor((NewFunc.eXenonColor)rdColor.Next(0, 12));
 			if (IsNitroModInstalled()) veh.SetBool(nitroModDecor, rdMod.Next(0, 2) > 0);
 		}
 
 		public static void PaintVehicle(this Vehicle veh)
 		{
 			rdColor = new Random();
-			// veh.PrimaryColor = rdColor.Next(0, 160);
+			veh.PrimaryColor = (VehicleColor)rdColor.Next(0, 160);
 			veh.SecondaryColor = veh.PrimaryColor;
 			rdMod = new Random();
 			int chance = rdMod.Next(0, 100);
-			// if (chance >= 0 && chance <= upgradeChance) veh.SecondaryColor = rdColor.Next(0, 160);
-			// veh.PearlescentColor = rdColor.Next(0, 160);
-			// veh.DashboardColor = rdColor.Next(0, 160);
-			// veh.TrimColor = rdColor.Next(0, 160);
-			// veh.RimColor = rdColor.Next(0, 160);
+			if (chance >= 0 && chance <= upgradeChance) veh.SecondaryColor = (VehicleColor)rdColor.Next(0, 160);
+			veh.PearlescentColor = (VehicleColor)rdColor.Next(0, 160);
+			veh.DashboardColor = (VehicleColor)rdColor.Next(0, 160);
+			veh.TrimColor = (VehicleColor)rdColor.Next(0, 160);
+			veh.RimColor = (VehicleColor)rdColor.Next(0, 160);
 		}
 
 		public static void ForwardSpeed(this Vehicle veh, float value)
 		{
 			GTA.Native.Function.Call(Hash.SET_VEHICLE_FORWARD_SPEED, veh, value);
 		}
-
-		// Open shop_controller.ysc and search for "!= 999"
-		public enum GlobalValue
-		{
-			b1_0_757_4 = 0x271803,
-			b1_0_791_2 = 0x272A34,
-			b1_0_877_1 = 0x2750BD,
-			b1_0_944_2 = 0x279476,
-			// b1_0_1011_1 = ?
-			b1_0_1032_1 = 2593970,
-			b1_0_1103_2 = 2599337,
-			b1_0_1180_2 = 2606794,
-			// b1_0_1290_1 = ?
-			b1_0_1365_1 = 4265719,
-			// b1_0_1493_0 = ?
-			b1_0_1493_1 = 4266042,
-			b1_0_1604_1 = 4266905,
-			b1_0_1737_0 = 4267883,
-			b1_0_1868_0 = 4268190
-		}
-
-		/*public static GlobalValue GetGlobalValue()
-		{
-			switch (Game.Version)
-			{
-				case var @case when @case == GameVersion.VER_1_0_757_4_NOSTEAM:
-				{
-					return GlobalValue.b1_0_757_4;
-				}
-				case var case1 when case1 == GameVersion.VER_1_0_791_2_NOSTEAM:
-				case var case2 when case2 == GameVersion.VER_1_0_791_2_STEAM:
-				{
-					return GlobalValue.b1_0_791_2;
-				}
-				case var case3 when case3 == GameVersion.VER_1_0_877_1_NOSTEAM:
-				case var case4 when case4 == GameVersion.VER_1_0_877_1_STEAM:
-				{
-					return GlobalValue.b1_0_877_1;
-				}
-				case var case5 when case5 == GameVersion.VER_1_0_944_2_NOSTEAM:
-				case var case6 when case6 == GameVersion.VER_1_0_944_2_STEAM:
-				{
-					return GlobalValue.b1_0_944_2;
-				}
-				case var case7 when case7 == GameVersion.VER_1_0_1032_1_NOSTEAM:
-				case var case8 when case8 == GameVersion.VER_1_0_1032_1_STEAM:
-				{
-					return GlobalValue.b1_0_1032_1;
-				}
-				case var case9 when case9 == GameVersion.VER_1_0_1103_2_NOSTEAM:
-				case var case10 when case10 == GameVersion.VER_1_0_1103_2_STEAM:
-				{
-					return GlobalValue.b1_0_1103_2;
-				}
-				case var case11 when case11 == GameVersion.VER_1_0_1180_2_NOSTEAM:
-				case var case12 when case12 == GameVersion.VER_1_0_1180_2_STEAM:
-				{
-					return GlobalValue.b1_0_1180_2;
-				}
-				case var case13 when case13 == GameVersion.VER_1_0_1365_1_NOSTEAM:
-				case var case14 when case14 == GameVersion.VER_1_0_1365_1_STEAM:
-				{
-					return GlobalValue.b1_0_1365_1;
-				}
-				case var case15 when case15 == GameVersion.VER_1_0_1493_1_NOSTEAM:
-				case var case16 when case16 == GameVersion.VER_1_0_1493_1_STEAM:
-				{
-					return GlobalValue.b1_0_1493_1;
-				}
-				case var case17 when case17 == GameVersion.VER_1_0_1604_0_NOSTEAM:
-				case var case18 when case18 == GameVersion.VER_1_0_1604_0_STEAM:
-				case var case19 when case19 == GameVersion.VER_1_0_1604_1_NOSTEAM:
-				case var case20 when case20 == GameVersion.VER_1_0_1604_1_STEAM:
-				{
-					return GlobalValue.b1_0_1604_1;
-				}
-				case var case21 when case21 == GameVersion.VER_1_0_1737_0_NOSTEAM:
-				case var case22 when case22 == GameVersion.VER_1_0_1737_0_STEAM:
-				case var case23 when case23 == GameVersion.VER_1_0_1737_6_NOSTEAM:
-				case var case24 when case24 == GameVersion.VER_1_0_1737_6_STEAM:
-				{
-					return GlobalValue.b1_0_1737_0;
-				}
-				case var case25 when case25 == GameVersion.VER_1_0_1868_0_NOSTEAM:
-				case var case26 when case26 == GameVersion.VER_1_0_1868_0_STEAM:
-				case var case27:
-				{
-					return GlobalValue.b1_0_1868_0;
-				}
-
-				default:
-				{
-					return GlobalValue.b1_0_1868_0;
-				}
-			}
-		}*/
 
 		public enum eZone
 		{

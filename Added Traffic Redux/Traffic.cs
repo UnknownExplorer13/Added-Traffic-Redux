@@ -11,7 +11,6 @@ namespace Added_Traffic_Redux
 		public Traffic()
 		{
 			Helper.LoadSettings();
-			// Game.Globals(Helper.GetGlobalValue).SetInt(1);
 			Tick += OnTick;
 			Aborted += OnAbort;
 		}
