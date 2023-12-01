@@ -42,21 +42,30 @@ namespace Added_Traffic_Redux_Settings.Forms
 		{
 			if (IsEdit)
 			{
-				ListViewItem.SubItems[1].Text = txtNewVeh.Text;
-				ListViewItem.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
+				if (txtNewVeh.Text.Length == 0) MessageBox.Show("Model cannot be blank.", "Error", default, MessageBoxIcon.Error);
+				else
+				{
+					ListViewItem.SubItems[1].Text = txtNewVeh.Text;
+					ListViewItem.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
+					this.mainForm.lvModelList.Striped();
+					this.mainForm.lvModelList.AddGroupFooter();
+					Close();
+				}
 			}
 			else
 			{
-				var newLVI = new ListViewItem("");
-				newLVI.SubItems.Add(txtNewVeh.Text);
-				newLVI.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
-				this.mainForm.lvModelList.Items.Add(newLVI);
-				this.mainForm.lvModelList.Striped();
+				if (txtNewVeh.Text.Length == 0) MessageBox.Show("Model cannot be blank.", "Error", default, MessageBoxIcon.Error);
+				else
+				{
+					var newLVI = new ListViewItem("");
+					newLVI.SubItems.Add(txtNewVeh.Text);
+					newLVI.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
+					this.mainForm.lvModelList.Items.Add(newLVI);
+					this.mainForm.lvModelList.Striped();
+					this.mainForm.lvModelList.AddGroupFooter();
+					Close();
+				}
 			}
-
-			this.mainForm.lvModelList.Striped();
-			this.mainForm.lvModelList.AddGroupFooter();
-			Close();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)

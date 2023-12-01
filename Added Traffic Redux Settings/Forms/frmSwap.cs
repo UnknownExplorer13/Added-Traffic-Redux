@@ -38,24 +38,32 @@ namespace Added_Traffic_Redux_Settings.Forms
 		{
 			if (IsEdit)
 			{
-				ListViewItem.Tag = new VehicleSwap(txtOldVeh.Text, txtNewVeh.Text, vehSwap.Enable);
-				ListViewItem.SubItems[1].Text = txtOldVeh.Text;
-				ListViewItem.SubItems[2].Text = txtNewVeh.Text;
-				ListViewItem.Checked = cbEnable.Checked;
+				if (txtOldVeh.Text.Length == 0) MessageBox.Show("Old Model cannot be blank.", "Error", default, MessageBoxIcon.Error);
+				else
+				{
+					ListViewItem.Tag = new VehicleSwap(txtOldVeh.Text, txtNewVeh.Text, vehSwap.Enable);
+					ListViewItem.SubItems[1].Text = txtOldVeh.Text;
+					ListViewItem.SubItems[2].Text = txtNewVeh.Text;
+					ListViewItem.Checked = cbEnable.Checked;
+					Close();
+				}
 			}
 			else
 			{
-				var newLVI = new ListViewItem("");
-				newLVI.SubItems.Add(txtOldVeh.Text);
-				newLVI.SubItems.Add(txtNewVeh.Text);
-				newLVI.Checked = cbEnable.Checked;
-				newLVI.Tag = txtNewVeh.Text.Length == 0 ? new VehicleSwap(txtOldVeh.Text, cbEnable.Checked) : new VehicleSwap(txtOldVeh.Text, txtNewVeh.Text, cbEnable.Checked);
-	
-				this.mainForm.lvVehicleSwap.Items.Add(newLVI);
-				this.mainForm.lvVehicleSwap.Striped();
-			}
+				if (txtOldVeh.Text.Length == 0) MessageBox.Show("Old Model cannot be blank.", "Error", default, MessageBoxIcon.Error);
+				else
+				{
+					var newLVI = new ListViewItem("");
+					newLVI.SubItems.Add(txtOldVeh.Text);
+					newLVI.SubItems.Add(txtNewVeh.Text);
+					newLVI.Checked = cbEnable.Checked;
+					newLVI.Tag = txtNewVeh.Text.Length == 0 ? new VehicleSwap(txtOldVeh.Text, cbEnable.Checked) : new VehicleSwap(txtOldVeh.Text, txtNewVeh.Text, cbEnable.Checked);
 
-			Close();
+					this.mainForm.lvVehicleSwap.Items.Add(newLVI);
+					this.mainForm.lvVehicleSwap.Striped();
+					Close();
+				}
+			}
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
