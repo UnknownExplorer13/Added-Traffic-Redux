@@ -16,6 +16,14 @@ namespace Added_Traffic_Redux_Settings.Forms
 			InitializeComponent();
 		}
 
+		private frmSettings mainForm = null;
+		public frmList(Form callingForm)
+		{
+			mainForm = callingForm as frmSettings;
+			base.Load += frmList_Load;
+			InitializeComponent();
+		}
+
 		private void frmList_Load(object sender, EventArgs e)
 		{
 			if (IsEdit)
@@ -35,19 +43,19 @@ namespace Added_Traffic_Redux_Settings.Forms
 			if (IsEdit)
 			{
 				ListViewItem.SubItems[1].Text = txtNewVeh.Text;
-				ListViewItem.Group = frmSettings.lvModelList.Groups[cmbCategory.Text];
+				ListViewItem.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
 			}
 			else
 			{
 				var newLVI = new ListViewItem("");
 				newLVI.SubItems.Add(txtNewVeh.Text);
-				newLVI.Group = frmSettings.lvModelList.Groups[cmbCategory.Text];
-				frmSettings.lvModelList.Items.Add(newLVI);
-				frmSettings.lvModelList.Striped();
+				newLVI.Group = this.mainForm.lvModelList.Groups[cmbCategory.Text];
+				this.mainForm.lvModelList.Items.Add(newLVI);
+				this.mainForm.lvModelList.Striped();
 			}
 
-			frmSettings.lvModelList.Striped();
-			frmSettings.lvModelList.AddGroupFooter();
+			this.mainForm.lvModelList.Striped();
+			this.mainForm.lvModelList.AddGroupFooter();
 			Close();
 		}
 

@@ -19,7 +19,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 		{
 			foreach (ListViewItem item in lvModelList.SelectedItems)
 			{
-				var fl = new frmList();
+				var fl = new frmList(this);
 				fl.ListViewItem = item;
 				fl.Category = item.Group.Header;
 				fl.Model = item.SubItems[1].Text;
@@ -30,7 +30,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 		private void tsmiListNew_Click(object sender, EventArgs e)
 		{
-			var fl = new frmList();
+			var fl = new frmList(this);
 			fl.IsEdit = false;
 			fl.Show();
 		}
@@ -44,7 +44,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 		private void tsmiSwapNew_Click(object sender, EventArgs e)
 		{
-			var fs = new frmSwap();
+			var fs = new frmSwap(this);
 			fs.vehSwap = new VehicleSwap();
 			fs.IsEdit = false;
 			fs.Show();
@@ -54,7 +54,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 		{
 			foreach (ListViewItem item in lvVehicleSwap.SelectedItems)
 			{
-				var fs = new frmSwap();
+				var fs = new frmSwap(this);
 				fs.ListViewItem = item;
 				fs.vehSwap = (VehicleSwap)item.Tag;
 				fs.IsEdit = true;
@@ -73,7 +73,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 			foreach (ListViewItem item in lvVehicleSwap.SelectedItems)
 			{
 				item.Checked = !item.Checked;
-				var fs = new frmSwap();
+				var fs = new frmSwap(this);
 				fs.ListViewItem = item;
 				fs.vehSwap = (VehicleSwap)item.Tag;
 				fs.IsEdit = true;
@@ -85,7 +85,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 		{
 			foreach (ListViewItem item in lvModelList.SelectedItems)
 			{
-				var fl = new frmList();
+				var fl = new frmList(this);
 				fl.ListViewItem = item;
 				fl.Category = item.Group.Header;
 				fl.Model = item.SubItems[1].Text;

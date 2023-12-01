@@ -88,7 +88,7 @@
             this.btnDelSwap = new System.Windows.Forms.Button();
             this.btnEditSwap = new System.Windows.Forms.Button();
             this.btnAddSwap = new System.Windows.Forms.Button();
-            lvVehicleSwap = new System.Windows.Forms.ListView();
+            this.lvVehicleSwap = new System.Windows.Forms.ListView();
             this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOldVehicle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chNewVehicle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -102,7 +102,7 @@
             this.btnEditModel = new System.Windows.Forms.Button();
             this.btnAddModel = new System.Windows.Forms.Button();
             this.btnHelp = new System.Windows.Forms.Button();
-            lvModelList = new Added_Traffic_Redux_Settings.ListViewX();
+            this.lvModelList = new Added_Traffic_Redux_Settings.ListViewX();
             this.chListNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chListModel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cmsVehicleList = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -706,23 +706,23 @@
             // 
             // lvVehicleSwap
             // 
-            lvVehicleSwap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvVehicleSwap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            lvVehicleSwap.CheckBoxes = true;
-            lvVehicleSwap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvVehicleSwap.CheckBoxes = true;
+            this.lvVehicleSwap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNo,
             this.chOldVehicle,
             this.chNewVehicle});
-            lvVehicleSwap.ContextMenuStrip = this.cmsVehicleSwap;
-            lvVehicleSwap.FullRowSelect = true;
-            lvVehicleSwap.HideSelection = false;
-            lvVehicleSwap.Location = new System.Drawing.Point(3, 19);
-            lvVehicleSwap.Name = "lvVehicleSwap";
-            lvVehicleSwap.Size = new System.Drawing.Size(487, 276);
-            lvVehicleSwap.TabIndex = 1;
-            lvVehicleSwap.UseCompatibleStateImageBehavior = false;
-            lvVehicleSwap.View = System.Windows.Forms.View.Details;
-            lvVehicleSwap.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvVehicleSwap_ItemChecked);
+            this.lvVehicleSwap.ContextMenuStrip = this.cmsVehicleSwap;
+            this.lvVehicleSwap.FullRowSelect = true;
+            this.lvVehicleSwap.HideSelection = false;
+            this.lvVehicleSwap.Location = new System.Drawing.Point(3, 19);
+            this.lvVehicleSwap.Name = "lvVehicleSwap";
+            this.lvVehicleSwap.Size = new System.Drawing.Size(487, 276);
+            this.lvVehicleSwap.TabIndex = 1;
+            this.lvVehicleSwap.UseCompatibleStateImageBehavior = false;
+            this.lvVehicleSwap.View = System.Windows.Forms.View.Details;
+            this.lvVehicleSwap.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvVehicleSwap_ItemChecked);
             // 
             // chNo
             // 
@@ -841,13 +841,13 @@
             // 
             // lvModelList
             // 
-            lvModelList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lvModelList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            lvModelList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvModelList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chListNo,
             this.chListModel});
-            lvModelList.ContextMenuStrip = this.cmsVehicleList;
-            lvModelList.FullRowSelect = true;
+            this.lvModelList.ContextMenuStrip = this.cmsVehicleList;
+            this.lvModelList.FullRowSelect = true;
             listViewGroup1.Header = "Downtown";
             listViewGroup1.Name = "Downtown";
             listViewGroup1.Tag = "";
@@ -881,7 +881,7 @@
             listViewGroup11.Header = "Fort Zancudo";
             listViewGroup11.Name = "Fort Zancudo";
             listViewGroup11.Tag = "";
-            lvModelList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            this.lvModelList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2,
             listViewGroup3,
@@ -893,14 +893,14 @@
             listViewGroup9,
             listViewGroup10,
             listViewGroup11});
-            lvModelList.HideSelection = false;
-            lvModelList.Location = new System.Drawing.Point(3, 19);
-            lvModelList.Name = "lvModelList";
-            lvModelList.Size = new System.Drawing.Size(259, 276);
-            lvModelList.TabIndex = 1;
-            lvModelList.UseCompatibleStateImageBehavior = false;
-            lvModelList.View = System.Windows.Forms.View.Details;
-            lvModelList.DoubleClick += new System.EventHandler(this.lvModelList_DoubleClick);
+            this.lvModelList.HideSelection = false;
+            this.lvModelList.Location = new System.Drawing.Point(3, 19);
+            this.lvModelList.Name = "lvModelList";
+            this.lvModelList.Size = new System.Drawing.Size(259, 276);
+            this.lvModelList.TabIndex = 1;
+            this.lvModelList.UseCompatibleStateImageBehavior = false;
+            this.lvModelList.View = System.Windows.Forms.View.Details;
+            this.lvModelList.DoubleClick += new System.EventHandler(this.lvModelList_DoubleClick);
             // 
             // chListNo
             // 
@@ -1186,7 +1186,7 @@
         private System.Windows.Forms.NumericUpDown nudSwapChance;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox7;
-        public static ListViewX lvModelList;
+        public ListViewX lvModelList;
         private System.Windows.Forms.ContextMenuStrip cmsVehicleList;
         private System.Windows.Forms.ToolStripMenuItem tsmiListNew;
         private System.Windows.Forms.ToolStripMenuItem tsmiListEdit;
@@ -1211,7 +1211,7 @@
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.LinkLabel llblWeb;
-        public static System.Windows.Forms.ListView lvVehicleSwap;
+        public System.Windows.Forms.ListView lvVehicleSwap;
         private System.Windows.Forms.ColumnHeader chListNo;
         private System.Windows.Forms.ColumnHeader chListModel;
     }

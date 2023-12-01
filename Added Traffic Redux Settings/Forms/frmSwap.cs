@@ -15,6 +15,14 @@ namespace Added_Traffic_Redux_Settings.Forms
 			InitializeComponent();
 		}
 
+		private frmSettings mainForm = null;
+		public frmSwap(Form callingForm)
+		{
+			mainForm = callingForm as frmSettings;
+			base.Load += frmSwap_Load;
+			InitializeComponent();
+		}
+
 		private void frmSwap_Load(object sender, EventArgs e)
 		{
 			if (IsEdit)
@@ -43,8 +51,8 @@ namespace Added_Traffic_Redux_Settings.Forms
 				newLVI.Checked = cbEnable.Checked;
 				newLVI.Tag = txtNewVeh.Text.Length == 0 ? new VehicleSwap(txtOldVeh.Text, cbEnable.Checked) : new VehicleSwap(txtOldVeh.Text, txtNewVeh.Text, cbEnable.Checked);
 	
-				frmSettings.lvVehicleSwap.Items.Add(newLVI);
-				frmSettings.lvVehicleSwap.Striped();
+				this.mainForm.lvVehicleSwap.Items.Add(newLVI);
+				this.mainForm.lvVehicleSwap.Striped();
 			}
 
 			Close();
