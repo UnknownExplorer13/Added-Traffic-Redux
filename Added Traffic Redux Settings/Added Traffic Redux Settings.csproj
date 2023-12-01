@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Added_Traffic_Redux_Settings</RootNamespace>
-    <AssemblyName>Added Traffic Redux</AssemblyName>
+    <AssemblyName>Added Traffic Redux Settings</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
