@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 15);
+            this.label1.Location = new System.Drawing.Point(42, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 15);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // txtOldVeh
             // 
-            this.txtOldVeh.Location = new System.Drawing.Point(118, 12);
+            this.txtOldVeh.Location = new System.Drawing.Point(116, 14);
             this.txtOldVeh.Name = "txtOldVeh";
             this.txtOldVeh.Size = new System.Drawing.Size(159, 23);
             this.txtOldVeh.TabIndex = 0;
@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 44);
+            this.label2.Location = new System.Drawing.Point(42, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 15);
             this.label2.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // txtNewVeh
             // 
-            this.txtNewVeh.Location = new System.Drawing.Point(118, 41);
+            this.txtNewVeh.Location = new System.Drawing.Point(116, 43);
             this.txtNewVeh.Name = "txtNewVeh";
             this.txtNewVeh.Size = new System.Drawing.Size(159, 23);
             this.txtNewVeh.TabIndex = 1;
@@ -72,7 +72,7 @@
             // cbEnable
             // 
             this.cbEnable.AutoSize = true;
-            this.cbEnable.Location = new System.Drawing.Point(118, 69);
+            this.cbEnable.Location = new System.Drawing.Point(116, 70);
             this.cbEnable.Name = "cbEnable";
             this.cbEnable.Size = new System.Drawing.Size(61, 19);
             this.cbEnable.TabIndex = 2;
@@ -82,7 +82,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(92, 94);
+            this.btnCancel.Location = new System.Drawing.Point(115, 91);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             // btnAction
             // 
-            this.btnAction.Location = new System.Drawing.Point(173, 94);
+            this.btnAction.Location = new System.Drawing.Point(197, 91);
             this.btnAction.Name = "btnAction";
             this.btnAction.Size = new System.Drawing.Size(75, 23);
             this.btnAction.TabIndex = 4;
@@ -106,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(354, 129);
+            this.ClientSize = new System.Drawing.Size(354, 127);
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cbEnable);

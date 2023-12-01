@@ -39,7 +39,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 17);
+            this.label1.Location = new System.Drawing.Point(69, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 15);
             this.label1.TabIndex = 8;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(69, 46);
+            this.label2.Location = new System.Drawing.Point(69, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 15);
             this.label2.TabIndex = 6;
@@ -85,7 +85,7 @@
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(114, 72);
+            this.btnCancel.Location = new System.Drawing.Point(115, 72);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -96,7 +96,7 @@
             // btnAction
             // 
             this.btnAction.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnAction.Location = new System.Drawing.Point(195, 72);
+            this.btnAction.Location = new System.Drawing.Point(197, 72);
             this.btnAction.Name = "btnAction";
             this.btnAction.Size = new System.Drawing.Size(75, 23);
             this.btnAction.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(354, 111);
+            this.ClientSize = new System.Drawing.Size(354, 108);
             this.Controls.Add(this.btnAction);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtNewVeh);
