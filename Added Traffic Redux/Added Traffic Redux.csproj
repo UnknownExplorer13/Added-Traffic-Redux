@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="ScriptHookVDotNet2, Version=2.10.13.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\ScriptHookVDotNet2.2.10.13\lib\net48\ScriptHookVDotNet2.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
