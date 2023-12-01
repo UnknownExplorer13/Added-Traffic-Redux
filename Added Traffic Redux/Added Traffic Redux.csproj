@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarGens.cs" />
+    <Compile Include="VehiclesList.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Traffic.cs" />
