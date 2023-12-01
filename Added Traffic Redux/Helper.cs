@@ -25,23 +25,23 @@ namespace Added_Traffic_Redux
 		public static WaitTime waitTime = new WaitTime(15, 10, 15, 10, 5);
 		public static float cruiseSpeed = 20.0f;
 		public static float spawnDistance = 150.0f;
+		public static int maxVehicles = 10;
 		public static DrivingStyle drivingStyle = DrivingStyle.Normal;
-		public static bool enableUpgrade = true;
-		public static int upgradeChance = 20;
-		public static bool randomizeColor = true;
-		public static bool randomizeWheels = true;
-		public static bool enableNeon = true;
-		public static int swapChance = 50;
-		public static float swapDistance = 100.0f;
+		public static eNodeType roadType = eNodeType.AsphaltRoad;
+		public static bool spawnParkedVehicles;
 		public static bool notify = true;
 		public static bool showBlip = true;
-		public static eNodeType roadType = eNodeType.AsphaltRoad;
+		public static bool debugText;
+		public static bool enableUpgrade = true;
+		public static bool randomizeWheels = true;
+		public static bool randomizeColor = true;
+		public static bool enableNeon = true;
+		public static int upgradeChance = 20;
 		public static Vehicles vehicles;
+		public static int swapChance = 50;
+		public static float swapDistance = 100.0f;
 		public static List<VehicleSwap> vehicleSwaps = new List<VehicleSwap>();
 		public static List<Model> vehicleSwaps2;
-		public static bool spawnParkedVehicles;
-		public static int maxVehicles = 10;
-		public static bool debugText;
 
 		public static List<string> noUpgradeClasses = new List<string> { "Commercial", "Emergency", "Industrial", "Military", "Service", "Utility" };
 
@@ -51,27 +51,27 @@ namespace Added_Traffic_Redux
 			waitTime = config.WaitTime;
 			cruiseSpeed = config.CruiseSpeed;
 			spawnDistance = config.SpawnDistance;
+			maxVehicles = config.MaxVehicleAllow;
 			drivingStyle = config.DrivingStyle;
-			enableUpgrade = config.EnableUpgrade;
-			upgradeChance = config.UpgradeChance;
-			randomizeColor = config.RandomizeColor;
-			randomizeWheels = config.RandomizeWheels;
-			enableNeon = config.EnableNeonUpgrade;
-			swapChance = config.SwapChance;
-			swapDistance = config.SwapDistance;
+			roadType = config.RoadType;
+			spawnParkedVehicles = config.SpawnParkedVehicle;
 			notify = config.Notify;
 			showBlip = config.ShowBlip;
-			roadType = config.RoadType;
+			debugText = config.DebugText;
+			enableUpgrade = config.EnableUpgrade;
+			randomizeWheels = config.RandomizeWheels;
+			randomizeColor = config.RandomizeColor;
+			enableNeon = config.EnableNeonUpgrade;
+			upgradeChance = config.UpgradeChance;
 			vehicles = config.Vehicles;
+			swapChance = config.SwapChance;
+			swapDistance = config.SwapDistance;
 			vehicleSwaps = config.VehicleSwaps;
 			vehicleSwaps2 = new List<Model> {};
 			foreach (var veh in vehicleSwaps)
 			{
 				if (veh.Enable) vehicleSwaps2.Add(new Model(veh.OldVehicle));
 			}
-			spawnParkedVehicles = config.SpawnParkedVehicle;
-			maxVehicles = config.MaxVehicleAllow;
-			debugText = config.DebugText;
 		}
 
 		public static void CreateConfig()

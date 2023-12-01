@@ -251,23 +251,23 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 				nudCruiseSpeed.Value = (decimal)settings.CruiseSpeed;
 				nudSpawnDistance.Value = (decimal)settings.SpawnDistance;
+				nudMaxVeh.Value = settings.MaxVehicleAllow;
 				cmbDrivingStyle.Text = settings.DrivingStyle;
 				cmbRoadType.Text = settings.RoadType;
 				cbSpawnParkedVeh.Checked = settings.SpawnParkedVehicle;
 
 				cbNotify.Checked = settings.Notify;
 				cbBlip.Checked = settings.ShowBlip;
+				cbDebugText.Checked = settings.DebugText;
 
 				cbVehicleUpgrade.Checked = settings.EnableUpgrade;
 				cbRdWheels.Checked = settings.RandomizeWheels;
 				cbRdColor.Checked = settings.RandomizeColor;
-				nudUpgradeChance.Value = settings.UpgradeChance;
 				cbNeon.Checked = settings.EnableNeonUpgrade;
+				nudUpgradeChance.Value = settings.UpgradeChance;
 
 				nudSwapChance.Value = settings.SwapChance;
 				nudSwapDistance.Value = (decimal)settings.SwapDistance;
-				nudMaxVeh.Value = settings.MaxVehicleAllow;
-				cbDebugText.Checked = settings.DebugText;
 
 				foreach (var vs in settings.VehicleSwaps)
 				{
@@ -379,23 +379,23 @@ namespace Added_Traffic_Redux_Settings.Forms
 
 					nudCruiseSpeed.Value = (decimal)settings.CruiseSpeed;
 					nudSpawnDistance.Value = (decimal)settings.SpawnDistance;
+					nudMaxVeh.Value = settings.MaxVehicleAllow;
 					cmbDrivingStyle.Text = settings.DrivingStyle;
 					cmbRoadType.Text = settings.RoadType;
 					cbSpawnParkedVeh.Checked = settings.SpawnParkedVehicle;
 
 					cbNotify.Checked = settings.Notify;
 					cbBlip.Checked = settings.ShowBlip;
+					cbDebugText.Checked = settings.DebugText;
 
 					cbVehicleUpgrade.Checked = settings.EnableUpgrade;
 					cbRdWheels.Checked = settings.RandomizeWheels;
 					cbRdColor.Checked = settings.RandomizeColor;
-					nudUpgradeChance.Value = settings.UpgradeChance;
 					cbNeon.Checked = settings.EnableNeonUpgrade;
+					nudUpgradeChance.Value = settings.UpgradeChance;
 
 					nudSwapChance.Value = settings.SwapChance;
 					nudSwapDistance.Value = (decimal)settings.SwapDistance;
-					nudMaxVeh.Value = settings.MaxVehicleAllow;
-					cbDebugText.Checked = settings.DebugText;
 
 					foreach (var vs in settings.VehicleSwaps)
 					{

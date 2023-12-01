@@ -21,22 +21,22 @@ namespace Added_Traffic_Redux_Settings
 		public WaitTime WaitTime;
 		public float CruiseSpeed;
 		public float SpawnDistance;
+		public int MaxVehicleAllow;
 		public string DrivingStyle;
-		public bool EnableUpgrade;
-		public int UpgradeChance;
-		public bool EnableNeonUpgrade;
-		public bool RandomizeColor;
-		public bool RandomizeWheels;
-		public int SwapChance;
-		public float SwapDistance;
+		public string RoadType;
+		public bool SpawnParkedVehicle;
 		public bool Notify;
 		public bool ShowBlip;
 		public bool DebugText;
-		public string RoadType;
-		public List<VehicleSwap> VehicleSwaps;
+		public bool EnableUpgrade;
+		public bool RandomizeWheels;
+		public bool RandomizeColor;
+		public bool EnableNeonUpgrade;
+		public int UpgradeChance;
 		public Vehicles Vehicles;
-		public bool SpawnParkedVehicle;
-		public int MaxVehicleAllow;
+		public int SwapChance;
+		public float SwapDistance;
+		public List<VehicleSwap> VehicleSwaps;
 
 		public Settings(string _fileName) : this()
 		{
@@ -115,22 +115,22 @@ namespace Added_Traffic_Redux_Settings
 					WaitTime = new WaitTime(15, 10, 15, 10, 20),
 					CruiseSpeed = 20.0f,
 					SpawnDistance = 150.0f,
+					MaxVehicleAllow = 10,
 					DrivingStyle = "Normal",
-					EnableUpgrade = true,
-					UpgradeChance = 20,
-					RandomizeColor = true,
-					SwapChance = 100,
-					SwapDistance = 100.0f,
+					RoadType = "AsphaltRoad",
+					SpawnParkedVehicle = true,
 					Notify = false,
 					ShowBlip = false,
-					RoadType = "AsphaltRoad",
-					Vehicles = GenerateVehicleList(),
-					VehicleSwaps = GenerateVehicleSwapList(),
+					DebugText = false,
+					EnableUpgrade = true,
 					RandomizeWheels = true,
+					RandomizeColor = true,
 					EnableNeonUpgrade = true,
-					SpawnParkedVehicle = true,
-					MaxVehicleAllow = 10,
-					DebugText = false
+					UpgradeChance = 20,
+					Vehicles = GenerateVehicleList(),
+					SwapChance = 100,
+					SwapDistance = 100.0f,
+					VehicleSwaps = GenerateVehicleSwapList()
 				};
 			}
 
@@ -149,22 +149,22 @@ namespace Added_Traffic_Redux_Settings
 					WaitTime = new WaitTime(15, 10, 15, 10, 20),
 					CruiseSpeed = 20.0f,
 					SpawnDistance = 150.0f,
+					MaxVehicleAllow = 10,
 					DrivingStyle = "Normal",
-					EnableUpgrade = true,
-					UpgradeChance = 20,
-					RandomizeColor = true,
-					SwapChance = 100,
-					SwapDistance = 100.0f,
+					RoadType = "AsphaltRoad",
+					SpawnParkedVehicle = true,
 					Notify = false,
 					ShowBlip = false,
-					RoadType = "AsphaltRoad",
-					Vehicles = GenerateVehicleList(),
-					VehicleSwaps = GenerateVehicleSwapList(),
+					DebugText = false,
+					EnableUpgrade = true,
 					RandomizeWheels = true,
+					RandomizeColor = true,
 					EnableNeonUpgrade = true,
-					SpawnParkedVehicle = true,
-					MaxVehicleAllow = 10,
-					DebugText = false
+					UpgradeChance = 20,
+					Vehicles = GenerateVehicleList(),
+					SwapChance = 100,
+					SwapDistance = 100.0f,
+					VehicleSwaps = GenerateVehicleSwapList()
 				};
 			}
 		}
