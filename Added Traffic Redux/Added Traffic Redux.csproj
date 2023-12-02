@@ -56,7 +56,6 @@
     <Compile Include="Helper.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Traffic.cs" />
-    <Compile Include="UselessHelper.cs" />
     <Compile Include="Vectors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
