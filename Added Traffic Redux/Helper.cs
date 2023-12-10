@@ -667,61 +667,61 @@ namespace Added_Traffic_Redux
 	
 		public static void FullyUpgradeVehicle(this Vehicle veh)
 		{
-			rdWheel = new Random();
+			rdMod = new Random();
 
 			veh.InstallModKit();
-			veh.SetMod((VehicleMod)43, veh.GetModCount((VehicleMod)43) - 1, true);
-			veh.SetMod((VehicleMod)40, veh.GetModCount((VehicleMod)40) - 1, true);
-			veh.SetMod((VehicleMod)42, veh.GetModCount((VehicleMod)42) - 1, true);
-			veh.SetMod((VehicleMod)16, veh.GetModCount((VehicleMod)16) - 1, true);
-			veh.SetMod((VehicleMod)24, rdWheel.Next(-1, veh.GetModCount((VehicleMod)24) - 1), rdWheel.Next(0, 2) > 0);
-			veh.SetMod((VehicleMod)12, veh.GetModCount((VehicleMod)12) - 1, true);
-			veh.SetMod((VehicleMod)34, veh.GetModCount((VehicleMod)34) - 1, true);
-			veh.SetMod((VehicleMod)29, veh.GetModCount((VehicleMod)29) - 1, true);
-			veh.SetMod((VehicleMod)30, veh.GetModCount((VehicleMod)30) - 1, true);
-			veh.SetMod((VehicleMod)31, veh.GetModCount((VehicleMod)31) - 1, true);
-			veh.SetMod((VehicleMod)11, veh.GetModCount((VehicleMod)11) - 1, true);
-			veh.SetMod((VehicleMod)39, veh.GetModCount((VehicleMod)39) - 1, true);
-			veh.SetMod((VehicleMod)4, veh.GetModCount((VehicleMod)4) - 1, true);
-			veh.SetMod((VehicleMod)8, veh.GetModCount((VehicleMod)8) - 1, true);
-			veh.SetMod((VehicleMod)5, veh.GetModCount((VehicleMod)5) - 1, true);
-			veh.SetMod((VehicleMod)1, veh.GetModCount((VehicleMod)1) - 1, true);
-			veh.SetMod((VehicleMod)23, rdWheel.Next(-1, veh.GetModCount((VehicleMod)23) - 1), rdWheel.Next(0, 2) > 0);
-			veh.SetMod((VehicleMod)6, veh.GetModCount((VehicleMod)6) - 1, true);
-			veh.SetMod((VehicleMod)7, veh.GetModCount((VehicleMod)7) - 1, true);
-			veh.SetMod((VehicleMod)14, veh.GetModCount((VehicleMod)14) - 1, true);
-			veh.SetMod((VehicleMod)38, veh.GetModCount((VehicleMod)38) - 1, true);
-			veh.SetMod((VehicleMod)48, veh.GetModCount((VehicleMod)48) - 1, true);
-			veh.SetMod((VehicleMod)28, veh.GetModCount((VehicleMod)28) - 1, true);
-			veh.SetMod((VehicleMod)35, veh.GetModCount((VehicleMod)35) - 1, true);
-			veh.SetMod((VehicleMod)25, veh.GetModCount((VehicleMod)25) - 1, true);
-			veh.SetMod((VehicleMod)2, veh.GetModCount((VehicleMod)2) - 1, true);
-			veh.SetMod((VehicleMod)9, veh.GetModCount((VehicleMod)9) - 1, true);
-			veh.SetMod((VehicleMod)10, veh.GetModCount((VehicleMod)10) - 1, true);
-			veh.SetMod((VehicleMod)32, veh.GetModCount((VehicleMod)32) - 1, true);
-			veh.SetMod((VehicleMod)3, veh.GetModCount((VehicleMod)3) - 1, true);
-			veh.SetMod((VehicleMod)36, veh.GetModCount((VehicleMod)36) - 1, true);
-			veh.SetMod((VehicleMod)0, veh.GetModCount((VehicleMod)0) - 1, true);
-			veh.SetMod((VehicleMod)33, veh.GetModCount((VehicleMod)33) - 1, true);
-			veh.SetMod((VehicleMod)41, veh.GetModCount((VehicleMod)41) - 1, true);
-			veh.SetMod((VehicleMod)15, veh.GetModCount((VehicleMod)15) - 1, true);
-			veh.SetMod((VehicleMod)45, veh.GetModCount((VehicleMod)45) - 1, true);
-			veh.SetMod((VehicleMod)13, veh.GetModCount((VehicleMod)13) - 1, true);
-			veh.SetMod((VehicleMod)44, veh.GetModCount((VehicleMod)44) - 1, true);
-			veh.SetMod((VehicleMod)27, veh.GetModCount((VehicleMod)27) - 1, true);
-			veh.SetMod((VehicleMod)37, veh.GetModCount((VehicleMod)37) - 1, true);
-			veh.SetMod((VehicleMod)26, veh.GetModCount((VehicleMod)26) - 1, true);
-			veh.SetMod((VehicleMod)46, veh.GetModCount((VehicleMod)46) - 1, true);
-			veh.ToggleMod((VehicleToggleMod)21, rdWheel.Next(0, 2) > 0);
-			veh.ToggleMod((VehicleToggleMod)17, rdWheel.Next(0, 2) > 0);
-			veh.ToggleMod((VehicleToggleMod)19, rdWheel.Next(0, 2) > 0);
-			veh.SetNeonLightsOn((VehicleNeonLight)3, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)2, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)0, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)1, enableNeon);
+			veh.SetMod((VehicleMod)0, veh.GetModCount((VehicleMod)0) - 1, true); // Spoiler
+			veh.SetMod((VehicleMod)1, veh.GetModCount((VehicleMod)1) - 1, true); // Front Bumper
+			veh.SetMod((VehicleMod)2, veh.GetModCount((VehicleMod)2) - 1, true); // Rear Bumper
+			veh.SetMod((VehicleMod)3, veh.GetModCount((VehicleMod)3) - 1, true); // Side Skirt
+			veh.SetMod((VehicleMod)4, veh.GetModCount((VehicleMod)4) - 1, true); // Exhaust
+			veh.SetMod((VehicleMod)5, veh.GetModCount((VehicleMod)5) - 1, true); // Frame
+			veh.SetMod((VehicleMod)6, veh.GetModCount((VehicleMod)6) - 1, true); // Grille
+			veh.SetMod((VehicleMod)7, veh.GetModCount((VehicleMod)7) - 1, true); // Hood
+			veh.SetMod((VehicleMod)8, veh.GetModCount((VehicleMod)8) - 1, true); // Fender
+			veh.SetMod((VehicleMod)9, veh.GetModCount((VehicleMod)9) - 1, true); // Right Fender
+			veh.SetMod((VehicleMod)10, veh.GetModCount((VehicleMod)10) - 1, true); // Roof
+			veh.SetMod((VehicleMod)11, veh.GetModCount((VehicleMod)11) - 1, true); // Engine
+			veh.SetMod((VehicleMod)12, veh.GetModCount((VehicleMod)12) - 1, true); // Brakes
+			veh.SetMod((VehicleMod)13, veh.GetModCount((VehicleMod)13) - 1, true); // Transmission
+			veh.SetMod((VehicleMod)14, veh.GetModCount((VehicleMod)14) - 1, true); // Horns
+			veh.SetMod((VehicleMod)15, veh.GetModCount((VehicleMod)15) - 1, true); // Suspension
+			veh.SetMod((VehicleMod)16, veh.GetModCount((VehicleMod)16) - 1, true); // Armor
+			veh.SetMod((VehicleMod)23, rdMod.Next(-1, veh.GetModCount((VehicleMod)23) - 1), rdMod.Next(0, 2) > 0); // Front Wheels
+			veh.SetMod((VehicleMod)24, rdMod.Next(-1, veh.GetModCount((VehicleMod)24) - 1), rdMod.Next(0, 2) > 0); // Back Wheels (motorcycles)
+			veh.SetMod((VehicleMod)25, veh.GetModCount((VehicleMod)25) - 1, true); // Plate Holder
+			veh.SetMod((VehicleMod)26, veh.GetModCount((VehicleMod)26) - 1, true); // Vanity Plates
+			veh.SetMod((VehicleMod)27, veh.GetModCount((VehicleMod)27) - 1, true); // Trim Design
+			veh.SetMod((VehicleMod)28, veh.GetModCount((VehicleMod)28) - 1, true); // Ornaments
+			veh.SetMod((VehicleMod)29, veh.GetModCount((VehicleMod)29) - 1, true); // Dashboard
+			veh.SetMod((VehicleMod)30, veh.GetModCount((VehicleMod)30) - 1, true); // Dial Design
+			veh.SetMod((VehicleMod)31, veh.GetModCount((VehicleMod)31) - 1, true); // Door Speakers
+			veh.SetMod((VehicleMod)32, veh.GetModCount((VehicleMod)32) - 1, true); // Seats
+			veh.SetMod((VehicleMod)33, veh.GetModCount((VehicleMod)33) - 1, true); // Steering Wheels
+			veh.SetMod((VehicleMod)34, veh.GetModCount((VehicleMod)34) - 1, true); // Column Shifter Levers
+			veh.SetMod((VehicleMod)35, veh.GetModCount((VehicleMod)35) - 1, true); // Plaques
+			veh.SetMod((VehicleMod)36, veh.GetModCount((VehicleMod)36) - 1, true); // Speakers
+			veh.SetMod((VehicleMod)37, veh.GetModCount((VehicleMod)37) - 1, true); // Trunk
+			veh.SetMod((VehicleMod)38, veh.GetModCount((VehicleMod)38) - 1, true); // Hydraulics
+			veh.SetMod((VehicleMod)39, veh.GetModCount((VehicleMod)39) - 1, true); // Engine Block
+			veh.SetMod((VehicleMod)40, veh.GetModCount((VehicleMod)40) - 1, true); // Air Filter
+			veh.SetMod((VehicleMod)41, veh.GetModCount((VehicleMod)41) - 1, true); // Struts
+			veh.SetMod((VehicleMod)42, veh.GetModCount((VehicleMod)42) - 1, true); // Arch Cover
+			veh.SetMod((VehicleMod)43, veh.GetModCount((VehicleMod)43) - 1, true); // Aerials
+			veh.SetMod((VehicleMod)44, veh.GetModCount((VehicleMod)44) - 1, true); // Trim
+			veh.SetMod((VehicleMod)45, veh.GetModCount((VehicleMod)45) - 1, true); // Tank
+			veh.SetMod((VehicleMod)46, veh.GetModCount((VehicleMod)46) - 1, true); // Windows
+			veh.SetMod((VehicleMod)48, veh.GetModCount((VehicleMod)48) - 1, true); // Livery
+			veh.ToggleMod((VehicleToggleMod)18, rdMod.Next(0, 2) > 0); // Turbo
+			veh.ToggleMod((VehicleToggleMod)20, rdMod.Next(0, 2) > 0); // Tire Smoke
+			veh.ToggleMod((VehicleToggleMod)22, rdMod.Next(0, 2) > 0); // Xenon Headlights
+			veh.SetNeonLightsOn((VehicleNeonLight)0, enableNeon); // Left Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)1, enableNeon); // Right Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)2, enableNeon); // Front Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)3, enableNeon); // Back Neon
 			rdColor = new Random();
-			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255));
-			veh.WindowTint = VehicleWindowTint.None;
+			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255)); // Neon Color
+			veh.WindowTint = VehicleWindowTint.Limo; // Window Tint
 			veh.XenonLightsColor((NewFunc.eXenonColor)rdColor.Next(0, 12));
 			if (IsNitroModInstalled()) veh.SetBool(nitroModDecor, true);
 		}
@@ -730,58 +730,59 @@ namespace Added_Traffic_Redux
 		{
 			veh.InstallModKit();
 			rdMod = new Random();
-			veh.SetMod((VehicleMod)43, rdMod.Next(-1, veh.GetModCount((VehicleMod)43) - 1), true);
-			veh.SetMod((VehicleMod)40, rdMod.Next(-1, veh.GetModCount((VehicleMod)40) - 1), true);
-			veh.SetMod((VehicleMod)42, rdMod.Next(-1, veh.GetModCount((VehicleMod)42) - 1), true);
-			veh.SetMod((VehicleMod)16, rdMod.Next(-1, veh.GetModCount((VehicleMod)16) - 1), true);
-			veh.SetMod((VehicleMod)24, rdMod.Next(-1, veh.GetModCount((VehicleMod)24) - 1), true);
-			veh.SetMod((VehicleMod)12, rdMod.Next(-1, veh.GetModCount((VehicleMod)12) - 1), true);
-			veh.SetMod((VehicleMod)34, rdMod.Next(-1, veh.GetModCount((VehicleMod)34) - 1), true);
-			veh.SetMod((VehicleMod)29, rdMod.Next(-1, veh.GetModCount((VehicleMod)29) - 1), true);
-			veh.SetMod((VehicleMod)30, rdMod.Next(-1, veh.GetModCount((VehicleMod)30) - 1), true);
-			veh.SetMod((VehicleMod)31, rdMod.Next(-1, veh.GetModCount((VehicleMod)31) - 1), true);
-			veh.SetMod((VehicleMod)11, rdMod.Next(-1, veh.GetModCount((VehicleMod)11) - 1), true);
-			veh.SetMod((VehicleMod)39, rdMod.Next(-1, veh.GetModCount((VehicleMod)39) - 1), true);
-			veh.SetMod((VehicleMod)4, rdMod.Next(-1, veh.GetModCount((VehicleMod)4) - 1), true);
-			veh.SetMod((VehicleMod)8, rdMod.Next(-1, veh.GetModCount((VehicleMod)8) - 1), true);
-			veh.SetMod((VehicleMod)5, rdMod.Next(-1, veh.GetModCount((VehicleMod)5) - 1), true);
-			veh.SetMod((VehicleMod)1, rdMod.Next(-1, veh.GetModCount((VehicleMod)1) - 1), true);
-			veh.SetMod((VehicleMod)23, rdMod.Next(-1, veh.GetModCount((VehicleMod)23) - 1), true);
-			veh.SetMod((VehicleMod)6, rdMod.Next(-1, veh.GetModCount((VehicleMod)6) - 1), true);
-			veh.SetMod((VehicleMod)7, rdMod.Next(-1, veh.GetModCount((VehicleMod)7) - 1), true);
-			veh.SetMod((VehicleMod)14, rdMod.Next(-1, veh.GetModCount((VehicleMod)14) - 1), true);
-			veh.SetMod((VehicleMod)38, rdMod.Next(-1, veh.GetModCount((VehicleMod)38) - 1), true);
-			veh.SetMod((VehicleMod)48, rdMod.Next(-1, veh.GetModCount((VehicleMod)48) - 1), true);
-			veh.SetMod((VehicleMod)28, rdMod.Next(-1, veh.GetModCount((VehicleMod)28) - 1), true);
-			veh.SetMod((VehicleMod)35, rdMod.Next(-1, veh.GetModCount((VehicleMod)35) - 1), true);
-			veh.SetMod((VehicleMod)25, rdMod.Next(-1, veh.GetModCount((VehicleMod)25) - 1), true);
-			veh.SetMod((VehicleMod)2, rdMod.Next(-1, veh.GetModCount((VehicleMod)2) - 1), true);
-			veh.SetMod((VehicleMod)9, rdMod.Next(-1, veh.GetModCount((VehicleMod)9) - 1), true);
-			veh.SetMod((VehicleMod)10, rdMod.Next(-1, veh.GetModCount((VehicleMod)10) - 1), true);
-			veh.SetMod((VehicleMod)32, rdMod.Next(-1, veh.GetModCount((VehicleMod)32) - 1), true);
-			veh.SetMod((VehicleMod)3, rdMod.Next(-1, veh.GetModCount((VehicleMod)3) - 1), true);
-			veh.SetMod((VehicleMod)36, rdMod.Next(-1, veh.GetModCount((VehicleMod)36) - 1), true);
-			veh.SetMod((VehicleMod)0, rdMod.Next(-1, veh.GetModCount((VehicleMod)0) - 1), true);
-			veh.SetMod((VehicleMod)33, rdMod.Next(-1, veh.GetModCount((VehicleMod)33) - 1), true);
-			veh.SetMod((VehicleMod)41, rdMod.Next(-1, veh.GetModCount((VehicleMod)41) - 1), true);
-			veh.SetMod((VehicleMod)15, rdMod.Next(-1, veh.GetModCount((VehicleMod)15) - 1), true);
-			veh.SetMod((VehicleMod)45, rdMod.Next(-1, veh.GetModCount((VehicleMod)45) - 1), true);
-			veh.SetMod((VehicleMod)13, rdMod.Next(-1, veh.GetModCount((VehicleMod)13) - 1), true);
-			veh.SetMod((VehicleMod)44, rdMod.Next(-1, veh.GetModCount((VehicleMod)44) - 1), true);
-			veh.SetMod((VehicleMod)27, rdMod.Next(-1, veh.GetModCount((VehicleMod)27) - 1), true);
-			veh.SetMod((VehicleMod)37, rdMod.Next(-1, veh.GetModCount((VehicleMod)37) - 1), true);
-			veh.SetMod((VehicleMod)26, rdMod.Next(-1, veh.GetModCount((VehicleMod)26) - 1), true);
-			veh.SetMod((VehicleMod)46, rdMod.Next(-1, veh.GetModCount((VehicleMod)46) - 1), true);
-			veh.ToggleMod((VehicleToggleMod)21, rdMod.Next(0, 2) > 0);
-			veh.ToggleMod((VehicleToggleMod)17, rdMod.Next(0, 2) > 0);
-			veh.ToggleMod((VehicleToggleMod)19, rdMod.Next(0, 2) > 0);
-			veh.SetNeonLightsOn((VehicleNeonLight)3, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)2, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)0, enableNeon);
-			veh.SetNeonLightsOn((VehicleNeonLight)1, enableNeon);
+
+			veh.SetMod((VehicleMod)0, rdMod.Next(-1, veh.GetModCount((VehicleMod)0) - 1), true); // Spoiler
+			veh.SetMod((VehicleMod)1, rdMod.Next(-1, veh.GetModCount((VehicleMod)1) - 1), true); // Front Bumper
+			veh.SetMod((VehicleMod)2, rdMod.Next(-1, veh.GetModCount((VehicleMod)2) - 1), true); // Rear Bumper
+			veh.SetMod((VehicleMod)3, rdMod.Next(-1, veh.GetModCount((VehicleMod)3) - 1), true); // Side Skirt
+			veh.SetMod((VehicleMod)4, rdMod.Next(-1, veh.GetModCount((VehicleMod)4) - 1), true); // Exhaust
+			veh.SetMod((VehicleMod)5, rdMod.Next(-1, veh.GetModCount((VehicleMod)5) - 1), true); // Frame
+			veh.SetMod((VehicleMod)6, rdMod.Next(-1, veh.GetModCount((VehicleMod)6) - 1), true); // Grille
+			veh.SetMod((VehicleMod)7, rdMod.Next(-1, veh.GetModCount((VehicleMod)7) - 1), true); // Hood
+			veh.SetMod((VehicleMod)8, rdMod.Next(-1, veh.GetModCount((VehicleMod)8) - 1), true); // Fender
+			veh.SetMod((VehicleMod)9, rdMod.Next(-1, veh.GetModCount((VehicleMod)9) - 1), true); // Right Fender
+			veh.SetMod((VehicleMod)10, rdMod.Next(-1, veh.GetModCount((VehicleMod)10) - 1), true); // Roof
+			veh.SetMod((VehicleMod)11, rdMod.Next(-1, veh.GetModCount((VehicleMod)11) - 1), true); // Engine
+			veh.SetMod((VehicleMod)12, rdMod.Next(-1, veh.GetModCount((VehicleMod)12) - 1), true); // Brakes
+			veh.SetMod((VehicleMod)13, rdMod.Next(-1, veh.GetModCount((VehicleMod)13) - 1), true); // Transmission
+			veh.SetMod((VehicleMod)14, rdMod.Next(-1, veh.GetModCount((VehicleMod)14) - 1), true); // Horns
+			veh.SetMod((VehicleMod)15, rdMod.Next(-1, veh.GetModCount((VehicleMod)15) - 1), true); // Suspension
+			veh.SetMod((VehicleMod)16, rdMod.Next(-1, veh.GetModCount((VehicleMod)16) - 1), true); // Armor
+			veh.SetMod((VehicleMod)23, rdMod.Next(-1, veh.GetModCount((VehicleMod)23) - 1), true); // Front Wheels
+			veh.SetMod((VehicleMod)24, rdMod.Next(-1, veh.GetModCount((VehicleMod)24) - 1), true); // Back Wheels (motorcycles)
+			veh.SetMod((VehicleMod)25, rdMod.Next(-1, veh.GetModCount((VehicleMod)25) - 1), true); // Plate Holder
+			veh.SetMod((VehicleMod)26, rdMod.Next(-1, veh.GetModCount((VehicleMod)26) - 1), true); // Vanity Plates
+			veh.SetMod((VehicleMod)27, rdMod.Next(-1, veh.GetModCount((VehicleMod)27) - 1), true); // Trim Design
+			veh.SetMod((VehicleMod)28, rdMod.Next(-1, veh.GetModCount((VehicleMod)28) - 1), true); // Ornaments
+			veh.SetMod((VehicleMod)29, rdMod.Next(-1, veh.GetModCount((VehicleMod)29) - 1), true); // Dashboard
+			veh.SetMod((VehicleMod)30, rdMod.Next(-1, veh.GetModCount((VehicleMod)30) - 1), true); // Dial Design
+			veh.SetMod((VehicleMod)31, rdMod.Next(-1, veh.GetModCount((VehicleMod)31) - 1), true); // Door Speakers
+			veh.SetMod((VehicleMod)32, rdMod.Next(-1, veh.GetModCount((VehicleMod)32) - 1), true); // Seats
+			veh.SetMod((VehicleMod)33, rdMod.Next(-1, veh.GetModCount((VehicleMod)33) - 1), true); // Steering Wheels
+			veh.SetMod((VehicleMod)34, rdMod.Next(-1, veh.GetModCount((VehicleMod)34) - 1), true); // Column Shifter Levers
+			veh.SetMod((VehicleMod)35, rdMod.Next(-1, veh.GetModCount((VehicleMod)35) - 1), true); // Plaques
+			veh.SetMod((VehicleMod)36, rdMod.Next(-1, veh.GetModCount((VehicleMod)36) - 1), true); // Speakers
+			veh.SetMod((VehicleMod)37, rdMod.Next(-1, veh.GetModCount((VehicleMod)37) - 1), true); // Trunk
+			veh.SetMod((VehicleMod)38, rdMod.Next(-1, veh.GetModCount((VehicleMod)38) - 1), true); // Hydraulics
+			veh.SetMod((VehicleMod)39, rdMod.Next(-1, veh.GetModCount((VehicleMod)39) - 1), true); // Engine Block
+			veh.SetMod((VehicleMod)40, rdMod.Next(-1, veh.GetModCount((VehicleMod)40) - 1), true); // Air Filter
+			veh.SetMod((VehicleMod)41, rdMod.Next(-1, veh.GetModCount((VehicleMod)41) - 1), true); // Struts
+			veh.SetMod((VehicleMod)42, rdMod.Next(-1, veh.GetModCount((VehicleMod)42) - 1), true); // Arch Cover
+			veh.SetMod((VehicleMod)43, rdMod.Next(-1, veh.GetModCount((VehicleMod)43) - 1), true); // Aerials
+			veh.SetMod((VehicleMod)44, rdMod.Next(-1, veh.GetModCount((VehicleMod)44) - 1), true); // Trim
+			veh.SetMod((VehicleMod)45, rdMod.Next(-1, veh.GetModCount((VehicleMod)45) - 1), true); // Tank
+			veh.SetMod((VehicleMod)46, rdMod.Next(-1, veh.GetModCount((VehicleMod)46) - 1), true); // Windows
+			veh.SetMod((VehicleMod)48, rdMod.Next(-1, veh.GetModCount((VehicleMod)48) - 1), true); // Livery
+			veh.ToggleMod((VehicleToggleMod)18, rdMod.Next(0, 2) > 0); // Turbo
+			veh.ToggleMod((VehicleToggleMod)20, rdMod.Next(0, 2) > 0); // Tire Smoke
+			veh.ToggleMod((VehicleToggleMod)22, rdMod.Next(0, 2) > 0); // Xenon Headlights
+			veh.SetNeonLightsOn((VehicleNeonLight)0, enableNeon); // Left Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)1, enableNeon); // Right Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)2, enableNeon); // Front Neon
+			veh.SetNeonLightsOn((VehicleNeonLight)3, enableNeon); // Back Neon
 			rdColor = new Random();
-			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255));
-			veh.WindowTint = VehicleWindowTint.None;
+			veh.NeonLightsColor = Color.FromArgb(rdColor.Next(0, 255), rdColor.Next(0, 255), rdColor.Next(0, 255)); // Neon Color
+			veh.WindowTint = VehicleWindowTint.None; // Window Tint
 			veh.XenonLightsColor((NewFunc.eXenonColor)rdColor.Next(0, 12));
 			if (IsNitroModInstalled()) veh.SetBool(nitroModDecor, rdMod.Next(0, 2) > 0);
 		}
