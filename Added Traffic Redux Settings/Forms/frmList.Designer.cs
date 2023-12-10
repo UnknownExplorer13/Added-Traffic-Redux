@@ -60,7 +60,9 @@
             "Grand Senora Desert",
             "San Chianski Mountain Range",
             "Blaine County",
-            "Fort Zancudo"});
+            "Fort Zancudo",
+            "North Yankton",
+            "Cayo Perico"});
             this.cmbCategory.Location = new System.Drawing.Point(116, 14);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(159, 23);

@@ -40,6 +40,8 @@
             System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("San Chianski Mountain Range", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Blaine County", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Fort Zancudo", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("North Yankton", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Cayo Perico", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSettings));
             this.grpbxWaitTime = new System.Windows.Forms.GroupBox();
             this.lblMorning = new System.Windows.Forms.Label();
@@ -66,6 +68,7 @@
             this.lblRoadType = new System.Windows.Forms.Label();
             this.cmbRoadType = new System.Windows.Forms.ComboBox();
             this.cbSpawnParkedVeh = new System.Windows.Forms.CheckBox();
+            this.cbSupportCayoPerico = new System.Windows.Forms.CheckBox();
             this.pnlDebug = new System.Windows.Forms.Panel();
             this.grpbxDebug = new System.Windows.Forms.GroupBox();
             this.cbNotify = new System.Windows.Forms.CheckBox();
@@ -114,6 +117,8 @@
             this.tsmiSCMR = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBC = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNY = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCP = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiListDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.btnHelp = new System.Windows.Forms.Button();
@@ -319,6 +324,7 @@
             this.grpbxGeneral.Controls.Add(this.lblRoadType);
             this.grpbxGeneral.Controls.Add(this.cmbRoadType);
             this.grpbxGeneral.Controls.Add(this.cbSpawnParkedVeh);
+            this.grpbxGeneral.Controls.Add(this.cbSupportCayoPerico);
             this.grpbxGeneral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbxGeneral.Location = new System.Drawing.Point(0, 0);
             this.grpbxGeneral.Name = "grpbxGeneral";
@@ -444,6 +450,16 @@
             this.cbSpawnParkedVeh.TabIndex = 14;
             this.cbSpawnParkedVeh.Text = "Spawn Parked Vehicles";
             this.cbSpawnParkedVeh.UseVisualStyleBackColor = true;
+            // 
+            // cbSupportCayoPerico
+            // 
+            this.cbSupportCayoPerico.AutoSize = true;
+            this.cbSupportCayoPerico.Location = new System.Drawing.Point(324, 81);
+            this.cbSupportCayoPerico.Name = "cbSupportCayoPerico";
+            this.cbSupportCayoPerico.Size = new System.Drawing.Size(145, 19);
+            this.cbSupportCayoPerico.TabIndex = 14;
+            this.cbSupportCayoPerico.Text = "Supp. Cayo Perico";
+            this.cbSupportCayoPerico.UseVisualStyleBackColor = true;
             // 
             // pnlDebug
             // 
@@ -840,7 +856,9 @@
             this.tsmiGSD,
             this.tsmiSCMR,
             this.tsmiBC,
-            this.tsmiFZ});
+            this.tsmiFZ,
+            this.tsmiNY,
+            this.tsmiCP});
             this.tsmiCopyTo.Name = "tsmiCopyTo";
             this.tsmiCopyTo.Size = new System.Drawing.Size(126, 22);
             this.tsmiCopyTo.Text = "Copy To...";
@@ -921,6 +939,20 @@
             this.tsmiFZ.Size = new System.Drawing.Size(232, 22);
             this.tsmiFZ.Text = "Fort Zancudo";
             this.tsmiFZ.Click += new System.EventHandler(this.tsmiFZ_Click);
+            // 
+            // tsmiNY
+            // 
+            this.tsmiNY.Name = "tsmiNY";
+            this.tsmiNY.Size = new System.Drawing.Size(232, 22);
+            this.tsmiNY.Text = "North Yankton";
+            this.tsmiNY.Click += new System.EventHandler(this.tsmiNY_Click);
+            // 
+            // tsmiCP
+            // 
+            this.tsmiCP.Name = "tsmiCP";
+            this.tsmiCP.Size = new System.Drawing.Size(232, 22);
+            this.tsmiCP.Text = "Cayo Perico";
+            this.tsmiCP.Click += new System.EventHandler(this.tsmiCP_Click);
             // 
             // toolStripSeparator3
             // 
@@ -1047,6 +1079,12 @@
             listViewGroup11.Header = "Fort Zancudo";
             listViewGroup11.Name = "Fort Zancudo";
             listViewGroup11.Tag = "";
+            listViewGroup12.Header = "North Yankton";
+            listViewGroup12.Name = "North Yankton";
+            listViewGroup12.Tag = "";
+            listViewGroup13.Header = "Cayo Perico";
+            listViewGroup13.Name = "Cayo Perico";
+            listViewGroup13.Tag = "";
             this.lvModelList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2,
@@ -1058,7 +1096,9 @@
             listViewGroup8,
             listViewGroup9,
             listViewGroup10,
-            listViewGroup11});
+            listViewGroup11,
+            listViewGroup12,
+            listViewGroup13});
             this.lvModelList.HideSelection = false;
             this.lvModelList.Location = new System.Drawing.Point(3, 19);
             this.lvModelList.Name = "lvModelList";
@@ -1157,6 +1197,7 @@
         private System.Windows.Forms.Label lblRoadType;
         private System.Windows.Forms.ComboBox cmbRoadType;
         private System.Windows.Forms.CheckBox cbSpawnParkedVeh;
+        private System.Windows.Forms.CheckBox cbSupportCayoPerico;
         private System.Windows.Forms.Panel pnlDebug;
         private System.Windows.Forms.GroupBox grpbxDebug;
         private System.Windows.Forms.CheckBox cbNotify;
@@ -1208,6 +1249,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiSCMR;
         private System.Windows.Forms.ToolStripMenuItem tsmiBC;
         private System.Windows.Forms.ToolStripMenuItem tsmiFZ;
+        private System.Windows.Forms.ToolStripMenuItem tsmiNY;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCP;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem tsmiListDelete;
         private System.Windows.Forms.Button btnHelp;

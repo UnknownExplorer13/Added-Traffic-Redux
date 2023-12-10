@@ -120,6 +120,23 @@ namespace Added_Traffic_Redux
 			return FortZancudoVehicles;
 		}
 
+		public static List<string> NorthYanktonVehList()
+		{
+			// Base Game Only
+			List<string> NorthYanktonVehicles = new List<string> { "asea2", "burrito5", "emperor3", "tractor3", "mesa2", "rancherxl2", "sadler2", "stockade3" };
+
+			return NorthYanktonVehicles;
+		}
+
+		public static List<string> CayoPericoVehList()
+		{
+			// Base Game Only
+			List<string> CayoPericoVehicles = new List<string> {};
+
+			CayoPericoVehicles.AddDLCVehicles("CayoPerico");
+			return CayoPericoVehicles;
+		}
+
 		public static void AddDLCVehicles(this List<string> listToAddTo, string zoneName)
 		{
 			foreach (var type in dlcNameClasses)
@@ -155,6 +172,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "bifta" };
 		public static List<string> BlaineCounty = new List<string> { "bifta" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Valentine's Day Massacre Special (mpValentines) - February 13, 2014
@@ -172,6 +191,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Business Update (mpBusiness) - March 4, 2014
@@ -189,6 +210,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The High Life Update (mpBusiness2) - May 12, 2014
@@ -206,6 +229,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The "I'm Not a Hipster" Update (mpHipster) - June 17, 2014
@@ -223,6 +248,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "dubsta3" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Independance Day Special (mpIndependance) - August 1, 2014
@@ -240,6 +267,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The San Andreas Flight School Update (mpPilot) - August 19, 2014
@@ -257,6 +286,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Last Team Standing Update (mpLTS) - October 2, 2014
@@ -274,6 +305,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Enhanced Edition (spUpgrade) - November 18, 2014 (Console)/April 14, 2015 (PC)
@@ -291,6 +324,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Festive Surprise (mpChristmas2) - December 18, 2014
@@ -308,6 +343,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Heists (mpHeist) - March 10, 2015
@@ -325,6 +362,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		public static List<string> FortZancudo = new List<string> { "barracks3", "insurgent", "insurgent2", "technical" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Ill-Gotten Gains Part 1 (mpLuxe) - June 10, 2015
@@ -342,6 +381,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Ill-Gotten Gains Part 2 (mpLuxe2) - July 8, 2015
@@ -359,6 +400,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "brawler" };
 		public static List<string> BlaineCounty = new List<string> { "brawler" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Lowriders (mpLowrider) - October 20, 2015
@@ -376,6 +419,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Halloween Surprise (mpHalloween) - October 29, 2015
@@ -393,6 +438,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Executives and Other Criminals (mpApartment) - December 15, 2015
@@ -410,6 +457,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "baller3", "baller4" };
 		public static List<string> FortZancudo = new List<string> { "limo2" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Festive Surprise 2015 (mpXmas_604490) - December 21, 2015
@@ -427,6 +476,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// January 2016 Update (mpJanuary2016) - January 28, 2016
@@ -444,6 +495,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Be My Valentine (mpValentines2) - February 10, 2016
@@ -461,6 +514,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Lowriders: Custom Classics (mpLowrider2) - March 15, 2016
@@ -478,6 +533,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Further Adventures in Finance and Felony (mpExecutive) - June 7, 2016
@@ -495,6 +552,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "rumpo3", "xls" };
 		public static List<string> FortZancudo = new List<string> { "brickade" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Cunning Stunts (mpStunt) - July 12, 2016
@@ -512,6 +571,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "bf400", "cliffhanger", "gargoyle", "trophytruck", "trophytruck2" };
 		public static List<string> BlaineCounty = new List<string> { "bf400", "cliffhanger", "contender", "gargoyle", "trophytruck", "trophytruck2" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Bikers (mpBiker) - October 4, 2016
@@ -529,6 +590,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "blazer4", "manchez" };
 		public static List<string> BlaineCounty = new List<string> { "blazer4", "esskey", "manchez", "ratbike", "tornado6", "wolfsbane", "youga2", "zombiea", "zombieb" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Import/Export (mpImportExport) - December 13, 2016
@@ -546,6 +609,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "blazer5" };
 		public static List<string> BlaineCounty = new List<string> { "blazer5", "wastelander" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Cunning Stunts: Special Vehicle Circuit (mpSpecialRaces) - March 14, 2017
@@ -563,6 +628,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Gunrunning (mpGunrunning) - June 13, 2017
@@ -580,6 +647,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		public static List<string> FortZancudo = new List<string> { "apc", "caddy3", "dune3", "halftrack", "insurgent3", "nightshark", "technical3" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Smuggler's Run (mpSmuggler) - August 29, 2017
@@ -597,6 +666,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Doomsday Heist (mpChristmas2017) - December 12, 2017
@@ -614,6 +685,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "comet4", "kamacho", "riata" };
 		public static List<string> FortZancudo = new List<string> { "barrage", "chernobog", "khanjali", "riot2", "thruster" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Southern San Andreas Super Sport Series (mpAssault) - March 20, 2018
@@ -631,6 +704,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		public static List<string> FortZancudo = new List<string> { "caracara" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// After Hours (mpBattle) - July 24, 2018
@@ -648,6 +723,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "freecrawler" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Arena War (mpChristmas2018) - December 11, 2018
@@ -665,6 +742,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		public static List<string> FortZancudo = new List<string> { "scarab" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Diamond Casino & Resort (mpVinewood) - July 23, 2019
@@ -682,6 +761,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		public static List<string> BlaineCounty = new List<string> { "caracara2", "hellion", "nebula", "peyote2", "rrocket" };
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Diamond Casino Heist (mpHeist3) - December 12, 2019
@@ -699,6 +780,8 @@ namespace Added_Traffic_Redux
 		public static List<string> SanChianskiMountainRange = new List<string> { "stryder" };
 		public static List<string> BlaineCounty = new List<string> { "everon", "outlaw", "stryder", "vagrant" };
 		public static List<string> FortZancudo = new List<string> { "zhaba" };
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	///////////////////////////////////
@@ -718,6 +801,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Cayo Perico Heist (mpHeist4) - December 15, 2020
@@ -735,6 +820,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		public static List<string> CayoPerico = new List<string> { "manchez2", "squaddie", "verus", "vetir", "winky" };
 	}
 
 	// Los Santos Tuners (mpTuner) - July 20, 2021
@@ -752,6 +839,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Contract (mpSecurity) - December 15, 2021
@@ -769,6 +858,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Expanded & Enhanced Edition (mpG9EC) - March 15, 2022
@@ -786,6 +877,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// The Criminal Enterprises (mpSum2) - July 26, 2022
@@ -803,6 +896,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// Los Santos Drug Wars (mpChristmas3) - December 13, 2022
@@ -820,6 +915,8 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 
 	// San Andreas Mercenaries (mp2023_01) - June 13, 2023
@@ -837,5 +934,7 @@ namespace Added_Traffic_Redux
 		// public static List<string> SanChianskiMountainRange = new List<string> {};
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
 	}
 }

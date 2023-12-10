@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 using GTA;
 using Metadata;
 
@@ -13,6 +14,7 @@ namespace Added_Traffic_Redux
 			Helper.LoadSettings();
 			Tick += OnTick;
 			Aborted += OnAbort;
+			KeyDown += OnKeyDown;
 		}
 
 		private void OnTick(object sender, EventArgs e)
@@ -30,7 +32,7 @@ namespace Added_Traffic_Redux
 				{
 					if (!(Helper.GetPlayerZone() == "OCEANA")) Helper.SpawnVehicle();
 
-					if (!(Helper.GetPlayerZone() == "HORS" | Helper.GetPlayerZone() == "LDAM" | Helper.GetPlayerZone() == "LACT" | Helper.GetPlayerZone() == "MTJOSE" | Helper.GetPlayerZone() == "CALAFB" | Helper.GetPlayerZone() == "BRADP" | Helper.GetPlayerZone() == "ELGORL" | Helper.GetPlayerZone() == "BRADT" | Helper.GetPlayerZone() == "OCEANA"))
+					if (!(Helper.GetPlayerZone() == "LDAM" | Helper.GetPlayerZone() == "LACT" | Helper.GetPlayerZone() == "MTJOSE" | Helper.GetPlayerZone() == "CALAFB" | Helper.GetPlayerZone() == "BRADP" | Helper.GetPlayerZone() == "ELGORL" | Helper.GetPlayerZone() == "BRADT" | Helper.GetPlayerZone() == "OCEANA"))
 					{
 						if (Helper.spawnParkedVehicles) Helper.SpawnParkedVehicle();
 					}
@@ -80,6 +82,13 @@ namespace Added_Traffic_Redux
 				Helper.LoadSettings();
 				Helper.XMLFileDate = File.GetLastWriteTime(@".\scripts\Added Traffic Redux.xml");
 			}
+		}
+
+		private void OnKeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.Add && e.Shift && e.Control) DevTools.EnableDevTools();
+			if (e.KeyCode == Keys.Divide && e.Shift && e.Control) DevTools.CycleZoneCarGens();
+			if (e.KeyCode == Keys.Multiply && e.Shift && e.Control) DevTools.CreateCarGenEntry();
 		}
 
 		private void OnAbort(object sender, EventArgs e)

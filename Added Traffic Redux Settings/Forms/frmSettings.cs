@@ -237,6 +237,32 @@ namespace Added_Traffic_Redux_Settings.Forms
 			lvModelList.AddGroupFooter();
 		}
 
+		private void tsmiNY_Click(object sender, EventArgs e)
+		{
+			foreach (ListViewItem item in lvModelList.SelectedItems)
+			{
+				ListViewItem newItem = (ListViewItem)item.Clone();
+				newItem.Group = lvModelList.Groups["North Yankton"];
+				lvModelList.Items.Add(newItem);
+			}
+
+			lvModelList.Striped();
+			lvModelList.AddGroupFooter();
+		}
+
+		private void tsmiCP_Click(object sender, EventArgs e)
+		{
+			foreach (ListViewItem item in lvModelList.SelectedItems)
+			{
+				ListViewItem newItem = (ListViewItem)item.Clone();
+				newItem.Group = lvModelList.Groups["Cayo Perico"];
+				lvModelList.Items.Add(newItem);
+			}
+
+			lvModelList.Striped();
+			lvModelList.AddGroupFooter();
+		}
+
 		private void frmSettings_Load(object sender, EventArgs e)
 		{
 			if (File.Exists(@".\Added Traffic Redux.xml"))
@@ -255,6 +281,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 				cmbDrivingStyle.Text = settings.DrivingStyle;
 				cmbRoadType.Text = settings.RoadType;
 				cbSpawnParkedVeh.Checked = settings.SpawnParkedVehicle;
+				cbSupportCayoPerico.Checked = settings.SupportCayoPerico;
 
 				cbNotify.Checked = settings.Notify;
 				cbBlip.Checked = settings.ShowBlip;
@@ -358,6 +385,20 @@ namespace Added_Traffic_Redux_Settings.Forms
 					lvi.Group = lvModelList.Groups["Fort Zancudo"];
 					lvModelList.Items.Add(lvi);
 				}
+				foreach (var ml in vehList.NorthYankton)
+				{
+					var lvi = new ListViewItem("");
+					lvi.SubItems.Add(ml);
+					lvi.Group = lvModelList.Groups["North Yankton"];
+					lvModelList.Items.Add(lvi);
+				}
+				foreach (var ml in vehList.CayoPerico)
+				{
+					var lvi = new ListViewItem("");
+					lvi.SubItems.Add(ml);
+					lvi.Group = lvModelList.Groups["Cayo Perico"];
+					lvModelList.Items.Add(lvi);
+				}
 
 				lvModelList.Striped();
 				lvModelList.AddGroupFooter();
@@ -383,6 +424,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 					cmbDrivingStyle.Text = settings.DrivingStyle;
 					cmbRoadType.Text = settings.RoadType;
 					cbSpawnParkedVeh.Checked = settings.SpawnParkedVehicle;
+					cbSupportCayoPerico.Checked = settings.SupportCayoPerico;
 
 					cbNotify.Checked = settings.Notify;
 					cbBlip.Checked = settings.ShowBlip;
@@ -486,6 +528,20 @@ namespace Added_Traffic_Redux_Settings.Forms
 						lvi.Group = lvModelList.Groups["Fort Zancudo"];
 						lvModelList.Items.Add(lvi);
 					}
+					foreach (var ml in vehList.NorthYankton)
+					{
+						var lvi = new ListViewItem("");
+						lvi.SubItems.Add(ml);
+						lvi.Group = lvModelList.Groups["North Yankton"];
+						lvModelList.Items.Add(lvi);
+					}
+					foreach (var ml in vehList.CayoPerico)
+					{
+						var lvi = new ListViewItem("");
+						lvi.SubItems.Add(ml);
+						lvi.Group = lvModelList.Groups["Cayo Perico"];
+						lvModelList.Items.Add(lvi);
+					}
 
 					lvModelList.Striped();
 					lvModelList.AddGroupFooter();
@@ -511,6 +567,7 @@ namespace Added_Traffic_Redux_Settings.Forms
 			newSetting.SwapDistance = (float)nudSwapDistance.Value;
 			newSetting.EnableNeonUpgrade = cbNeon.Checked;
 			newSetting.SpawnParkedVehicle = cbSpawnParkedVeh.Checked;
+			newSetting.SupportCayoPerico = cbSupportCayoPerico.Checked;
 			newSetting.MaxVehicleAllow = (int)nudMaxVeh.Value;
 			newSetting.DebugText = cbDebugText.Checked;
 
@@ -529,6 +586,8 @@ namespace Added_Traffic_Redux_Settings.Forms
 			var scmr = new List<string>();
 			var bc = new List<string>();
 			var fz = new List<string>();
+			var ny = new List<string>();
+			var cp = new List<string>();
 
 			foreach (ListViewGroup group in lvModelList.Groups)
 			{
@@ -591,6 +650,16 @@ namespace Added_Traffic_Redux_Settings.Forms
 							fz.Add(item.SubItems[1].Text);
 							break;
 						}
+						case "North Yankton":
+						{
+							ny.Add(item.SubItems[1].Text);
+							break;
+						}
+						case "Cayo Perico":
+						{
+							cp.Add(item.SubItems[1].Text);
+							break;
+						}
 					}
 				}
 			}
@@ -607,6 +676,8 @@ namespace Added_Traffic_Redux_Settings.Forms
 			mList.SanChianskiMountainRange = scmr;
 			mList.BlaineCounty = bc;
 			mList.FortZancudo = fz;
+			mList.NorthYankton = ny;
+			mList.CayoPerico = cp;
 			newSetting.Vehicles = mList;
 			newSetting.Save();
 
@@ -637,7 +708,9 @@ namespace Added_Traffic_Redux_Settings.Forms
 			"Grand Senora Desert\n" + "Bolingbroke Penitentiary, Grand Senora Desert, and Redwood Lights Track\n\n" +
 			"San Chianski Mountain Range\n" + "Davis Quartz, Humane Labs and Research, Palmer-Taylor Power Station, RON Alternates Wind Farm, and San Chianski Mountain Range\n\n" +
 			"Blaine County\n" + "Alamo Sea, Braddock Pass, Braddock Tunnel, Calafia Bridge, Cassidy Creek, Chiliad Mountain State Wilderness, El Gordo Lighthouse, Fort Zancudo, Galilee, Grapeseed, Harmony, Lago Zancudo, Mount Chiliad, Mount Gordo, Mount Josiah, North Chumash, Paleto Bay, Paleto Cove, Paleto Forest, Procopio Beach, Raton Canyon, Sandy Shores, Stab City, and Zancudo River\n\n" +
-			"Fort Zancudo\n" + "Fort Zancudo Only";
+			"Fort Zancudo\n" + "Fort Zancudo Only\n\n" +
+			"North Yankton\n" + "North Yankton Only\n\n" +
+			"Cayo Perico\n" + "Cayo Perico Only";
 
 			MessageBox.Show(helpText, "Help", default, MessageBoxIcon.Question);
 		}

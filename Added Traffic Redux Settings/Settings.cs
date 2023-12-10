@@ -25,6 +25,7 @@ namespace Added_Traffic_Redux_Settings
 		public string DrivingStyle;
 		public string RoadType;
 		public bool SpawnParkedVehicle;
+		public bool SupportCayoPerico;
 		public bool Notify;
 		public bool ShowBlip;
 		public bool DebugText;
@@ -88,6 +89,12 @@ namespace Added_Traffic_Redux_Settings
 			// Army Base
 			vehicles.FortZancudo = VehiclesList.FortZancudoVehList();
 
+			// North Yankton
+			vehicles.NorthYankton = VehiclesList.NorthYanktonVehList();
+
+			// Cayo Perico
+			vehicles.CayoPerico = VehiclesList.CayoPericoVehList();
+
 			return vehicles;
 		}
 
@@ -119,6 +126,7 @@ namespace Added_Traffic_Redux_Settings
 					DrivingStyle = "Normal",
 					RoadType = "AsphaltRoad",
 					SpawnParkedVehicle = true,
+					SupportCayoPerico = false,
 					Notify = false,
 					ShowBlip = false,
 					DebugText = false,
@@ -153,6 +161,7 @@ namespace Added_Traffic_Redux_Settings
 					DrivingStyle = "Normal",
 					RoadType = "AsphaltRoad",
 					SpawnParkedVehicle = true,
+					SupportCayoPerico = false,
 					Notify = false,
 					ShowBlip = false,
 					DebugText = false,
@@ -204,8 +213,10 @@ namespace Added_Traffic_Redux_Settings
 		public List<string> SanChianskiMountainRange;
 		public List<string> BlaineCounty;
 		public List<string> FortZancudo;
+		public List<string> NorthYankton;
+		public List<string> CayoPerico;
 
-		public Vehicles(List<string> dt, List<string> vw, List<string> sls, List<string> psls, List<string> els, List<string> ves, List<string> ls, List<string> gsd, List<string> scmr, List<string> bc, List<string> fz)
+		public Vehicles(List<string> dt, List<string> vw, List<string> sls, List<string> psls, List<string> els, List<string> ves, List<string> ls, List<string> gsd, List<string> scmr, List<string> bc, List<string> fz, List<string> ny, List<string> cp)
 		{
 			Downtown = dt;
 			Vinewood = vw;
@@ -218,6 +229,8 @@ namespace Added_Traffic_Redux_Settings
 			SanChianskiMountainRange = scmr;
 			BlaineCounty = bc;
 			FortZancudo = fz;
+			NorthYankton = ny;
+			CayoPerico = cp;
 		}
 	}
 

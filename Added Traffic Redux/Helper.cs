@@ -29,6 +29,7 @@ namespace Added_Traffic_Redux
 		public static DrivingStyle drivingStyle = DrivingStyle.Normal;
 		public static eNodeType roadType = eNodeType.AsphaltRoad;
 		public static bool spawnParkedVehicles;
+		public static bool supportCayoPerico;
 		public static bool notify = true;
 		public static bool showBlip = true;
 		public static bool debugText;
@@ -55,6 +56,7 @@ namespace Added_Traffic_Redux
 			drivingStyle = config.DrivingStyle;
 			roadType = config.RoadType;
 			spawnParkedVehicles = config.SpawnParkedVehicle;
+			supportCayoPerico = config.SupportCayoPerico;
 			notify = config.Notify;
 			showBlip = config.ShowBlip;
 			debugText = config.DebugText;
@@ -815,7 +817,9 @@ namespace Added_Traffic_Redux
 			GrandSenoraDesert,
 			SanChianskiMountainRange,
 			BlaineCounty,
-			FortZancudo
+			FortZancudo,
+			NorthYankton,
+			CayoPerico
 		}
 
 		public static List<string> GetPlayerZoneVehicleList()
@@ -824,36 +828,37 @@ namespace Added_Traffic_Redux
 			var zone = GTA.Native.Function.Call<string>(Hash.GET_NAME_OF_ZONE, pp.X, pp.Y, pp.Z);
 			switch (zone)
 			{
+				case "DOWNT":
+				case "LEGSQU":
 				case "PBOX":
 				case "SKID":
 				case "TEXTI":
-				case "LEGSQU":
-				case "DOWNT":
 				{
 					return vehicles.Downtown;
 				}
+				case "ALTA":
+				case "BURTON":
+				case "CHIL":
 				case "DTVINE":
 				case "EAST_V":
-				case "MIRR":
-				case "HORS":
-				case "WVINE":
-				case "ALTA":
-				case "HAWICK":
-				case "VINE":
-				case "RICHM":
-				case "golf":
-				case "ROCKF":
-				case "CHIL":
-				case "RGLEN":
-				case "OBSERV":
 				case "GALLI":
+				case "golf":
+				case "HAWICK":
+				case "HORS":
+				case "MIRR":
+				case "OBSERV":
+				case "RGLEN":
+				case "RICHM":
+				case "ROCKF":
+				case "VINE":
+				case "WVINE":
 				{
 					return vehicles.Vinewood;
 				}
-				case "DAVIS":
-				case "STRAW":
 				case "CHAMH":
+				case "DAVIS":
 				case "RANCHO":
+				case "STRAW":
 				{
 					return vehicles.SouthLosSantos;
 				}
@@ -864,42 +869,43 @@ namespace Added_Traffic_Redux
 				{
 					return vehicles.PortOfSouthLosSantos;
 				}
-				case "LMESA":
 				case "CYPRE":
 				case "EBURO":
+				case "LMESA":
 				case "MURRI":
 				{
 					return vehicles.EastLosSantos;
 				}
-				case "VESP":
 				case "BEACH":
-				case "VCANA":
 				case "DELSOL":
+				case "VCANA":
+				case "VESP":
 				{
 					return vehicles.Vespucci;
 				}
-				case "DELBE":
-				case "DELPE":
-				case "LOSPUER":
-				case "STAD":
-				case "KOREAT":
 				case "AIRP":
-				case "MORN":
-				case "PBLUFF":
 				case "BHAMCA":
 				case "CHU":
+				case "DELBE":
+				case "DELPE":
+				case "GREATC":
+				case "KOREAT":
+				case "LACT":
+				case "LDAM":
+				case "LOSPUER":
+				case "MORN":
+				case "MOVIE":
+				case "NOOSE":
+				case "PALHIGH":
+				case "PBLUFF":
+				case "SanAnd":
+				case "STAD":
+				case "TATAMO":
 				case "TONGVAH":
 				case "TONGVAV":
-				case "GREATC":
-				case "TATAMO":
-				case "LDAM":
-				case "LACT":
-				case "PALHIGH":
-				case "NOOSE":
-				case "MOVIE":
-				case "SanAnd":
 				{
-					return vehicles.LosSantos;
+					if (supportCayoPerico && IsPlayerInCayoPerico()) return vehicles.CayoPerico;
+					else return vehicles.LosSantos;
 				}
 				case "DESRT":
 				case "JAIL":
@@ -907,43 +913,47 @@ namespace Added_Traffic_Redux
 				{
 					return vehicles.GrandSenoraDesert;
 				}
+				case "HUMLAB":
+				case "PALMPOW":
 				case "SANCHIA":
 				case "WINDF":
-				case "PALMPOW":
-				case "HUMLAB":
 				case "ZQ_UAR":
 				{
 					return vehicles.SanChianskiMountainRange;
 				}
-				case "PALETO":
-				case "PALFOR":
-				case "PALCOV":
-				case "PROCOB":
-				case "HARMO":
-				case "SANDY":
-				case "MTJOSE":
-				case "ZANCUDO":
-				case "SLAB":
-				case "NCHU":
+				case "ALAMO":
+				case "BRADP":
+				case "BRADT":
+				case "CALAFB":
 				case "CANNY":
 				case "CCREAK":
-				case "CALAFB":
 				case "CMSW":
-				case "ALAMO":
-				case "GRAPES":
-				case "MTGORDO":
 				case "ELGORL":
-				case "BRADP":
-				case "MTCHIL":
 				case "GALFISH":
-				case "BRADT":
+				case "GRAPES":
+				case "HARMO":
 				case "LAGO":
+				case "MTCHIL":
+				case "MTGORDO":
+				case "MTJOSE":
+				case "NCHU":
+				case "PALCOV":
+				case "PALETO":
+				case "PALFOR":
+				case "PROCOB":
+				case "SANDY":
+				case "SLAB":
+				case "ZANCUDO":
 				{
 					return vehicles.BlaineCounty;
 				}
 				case "ARMYB":
 				{
 					return vehicles.FortZancudo;
+				}
+				case "PROL":
+				{
+					return vehicles.NorthYankton;
 				}
 	
 				default:
@@ -1018,152 +1028,69 @@ namespace Added_Traffic_Redux
 				{
 					return CarGens.DOWNT;
 				}
-				case "GALLI":
-				case "CHIL":
+				case "AIRP":
 				{
-					return CarGens.CHIL;
+					return CarGens.AIRP;
 				}
-				case "DESRT":
-				case "GREATC":
+				case "ALAMO":
 				{
-					return CarGens.DESRT;
-				}
-				case "CMSW":
-				case "PALCOV":
-				{
-					return CarGens.CMSW;
-				}
-				case "PBOX":
-				{
-					return CarGens.PBOX;
-				}
-				case "SKID":
-				{
-					return CarGens.SKID;
-				}
-				case "TEXTI":
-				{
-					return CarGens.TEXTI;
-				}
-				case "LEGSQU":
-				{
-					return CarGens.LEGSQU;
-				}
-				case "CANNY":
-				{
-					return CarGens.CANNY;
-				}
-				case "DTVINE":
-				{
-					return CarGens.DTVINE;
-				}
-				case "EAST_V":
-				{
-					return CarGens.EAST_V;
-				}
-				case "MIRR":
-				{
-					return CarGens.MIRR;
-				}
-				case "WVINE":
-				{
-					return CarGens.WVINE;
+					return CarGens.ALAMO;
 				}
 				case "ALTA":
 				{
 					return CarGens.ALTA;
 				}
-				case "HAWICK":
+				case "ARMYB":
 				{
-					return CarGens.HAWICK;
-				}
-				case "RICHM":
-				{
-					return CarGens.RICHM;
-				}
-				case "golf":
-				{
-					return CarGens.golf;
-				}
-				case "ROCKF":
-				{
-					return CarGens.ROCKF;
-				}
-				case "CCREAK":
-				{
-					return CarGens.CCREAK;
-				}
-				case "RGLEN":
-				{
-					return CarGens.RGLEN;
-				}
-				case "OBSERV":
-				{
-					return CarGens.OBSERV;
-				}
-				case "DAVIS":
-				{
-					return CarGens.DAVIS;
-				}
-				case "STRAW":
-				{
-					return CarGens.STRAW;
-				}
-				case "CHAMH":
-				{
-					return CarGens.CHAMH;
-				}
-				case "RANCHO":
-				{
-					return CarGens.RANCHO;
+					return CarGens.ARMYB;
 				}
 				case "BANNING":
 				{
 					return CarGens.BANNING;
 				}
-				case "ELYSIAN":
+				case "BEACH":
 				{
-					return CarGens.ELYSIAN;
+					return CarGens.BEACH;
 				}
-				case "TERMINA":
+				case "BHAMCA":
 				{
-					return CarGens.TERMINA;
+					return CarGens.BHAMCA;
 				}
-				case "ZP_ORT":
+				case "BURTON":
 				{
-					return CarGens.ZP_ORT;
+					return CarGens.BURTON;
 				}
-				case "LMESA":
+				case "CANNY":
 				{
-					return CarGens.LMESA;
+					return CarGens.CANNY;
+				}
+				case "CCREAK":
+				{
+					return CarGens.CCREAK;
+				}
+				case "CHAMH":
+				{
+					return CarGens.CHAMH;
+				}
+				case "CHIL":
+				{
+					return CarGens.CHIL;
+				}
+				case "CHU":
+				{
+					return CarGens.CHU;
+				}
+				case "CMSW":
+				{
+					return CarGens.CMSW;
 				}
 				case "CYPRE":
 				{
 					return CarGens.CYPRE;
 				}
-				case "EBURO":
+				case "DAVIS":
 				{
-					return CarGens.EBURO;
-				}
-				case "MURRI":
-				{
-					return CarGens.MURRI;
-				}
-				case "VESP":
-				{
-					return CarGens.VESP;
-				}
-				case "BEACH":
-				{
-					return CarGens.BEACH;
-				}
-				case "VCANA":
-				{
-					return CarGens.VCANA;
-				}
-				case "DELSOL":
-				{
-					return CarGens.DELSOL;
+					return CarGens.DAVIS;
 				}
 				case "DELBE":
 				{
@@ -1173,97 +1100,129 @@ namespace Added_Traffic_Redux
 				{
 					return CarGens.DELPE;
 				}
-				case "LOSPUER":
+				case "DELSOL":
 				{
-					return CarGens.LOSPUER;
+					return CarGens.DELSOL;
 				}
-				case "STAD":
+				case "DESRT":
 				{
-					return CarGens.STAD;
+					return CarGens.DESRT;
 				}
-				case "KOREAT":
+				case "DTVINE":
 				{
-					return CarGens.KOREAT;
+					return CarGens.DTVINE;
 				}
-				case "AIRP":
+				case "EAST_V":
 				{
-					return CarGens.AIRP;
+					return CarGens.EAST_V;
 				}
-				case "MORN":
+				case "EBURO":
 				{
-					return CarGens.MORN;
+					return CarGens.EBURO;
 				}
-				case "PBLUFF":
+				case "ELYSIAN":
 				{
-					return CarGens.PBLUFF;
+					return CarGens.ELYSIAN;
 				}
-				case "BHAMCA":
+				case "GALFISH":
 				{
-					return CarGens.BHAMCA;
+					return CarGens.GALFISH;
 				}
-				case "CHU":
+				case "GALLI":
 				{
-					return CarGens.CHU;
+					return CarGens.GALLI;
 				}
-				case "TONGVAH":
+				case "golf":
 				{
-					return CarGens.TONGVAH;
+					return CarGens.golf;
 				}
-				case "TONGVAV":
+				case "GRAPES":
 				{
-					return CarGens.TONGVAV;
+					return CarGens.GRAPES;
 				}
-				case "TATAMO":
+				case "GREATC":
 				{
-					return CarGens.TATAMO;
+					return CarGens.GREATC;
 				}
-				case "PALHIGH":
+				case "HARMO":
 				{
-					return CarGens.PALHIGH;
+					return CarGens.HARMO;
 				}
-				case "NOOSE":
+				case "HAWICK":
 				{
-					return CarGens.NOOSE;
+					return CarGens.HAWICK;
 				}
-				case "MOVIE":
+				case "HORS":
 				{
-					return CarGens.MOVIE;
-				}
-				case "SanAnd":
-				{
-					return CarGens.SanAnd;
-				}
-				case "ALAMO":
-				{
-					return CarGens.ALAMO;
-				}
-				case "JAIL":
-				{
-					return CarGens.JAIL;
-				}
-				case "RTRAK":
-				{
-					return CarGens.RTRAK;
-				}
-				case "SANCHIA":
-				{
-					return CarGens.SANCHIA;
-				}
-				case "WINDF":
-				{
-					return CarGens.WINDF;
-				}
-				case "PALMPOW":
-				{
-					return CarGens.PALMPOW;
+					return CarGens.HORS;
 				}
 				case "HUMLAB":
 				{
 					return CarGens.HUMLAB;
 				}
-				case "ZQ_UAR":
+				case "JAIL":
 				{
-					return CarGens.ZQ_UAR;
+					return CarGens.JAIL;
+				}
+				case "KOREAT":
+				{
+					return CarGens.KOREAT;
+				}
+				case "LAGO":
+				{
+					return CarGens.LAGO;
+				}
+				case "LEGSQU":
+				{
+					return CarGens.LEGSQU;
+				}
+				case "LMESA":
+				{
+					return CarGens.LMESA;
+				}
+				case "LOSPUER":
+				{
+					return CarGens.LOSPUER;
+				}
+				case "MIRR":
+				{
+					return CarGens.MIRR;
+				}
+				case "MORN":
+				{
+					return CarGens.MORN;
+				}
+				case "MOVIE":
+				{
+					return CarGens.MOVIE;
+				}
+				case "MTCHIL":
+				{
+					return CarGens.MTCHIL;
+				}
+				case "MTGORDO":
+				{
+					return CarGens.MTGORDO;
+				}
+				case "MURRI":
+				{
+					return CarGens.MURRI;
+				}
+				case "NCHU":
+				{
+					return CarGens.NCHU;
+				}
+				case "NOOSE":
+				{
+					return CarGens.NOOSE;
+				}
+				case "OBSERV":
+				{
+					return CarGens.OBSERV;
+				}
+				case "PALCOV":
+				{
+					return CarGens.PALCOV;
 				}
 				case "PALETO":
 				{
@@ -1273,57 +1232,126 @@ namespace Added_Traffic_Redux
 				{
 					return CarGens.PALFOR;
 				}
+				case "PALHIGH":
+				{
+					return CarGens.PALHIGH;
+				}
+				case "PALMPOW":
+				{
+					return CarGens.PALMPOW;
+				}
+				case "PBLUFF":
+				{
+					return CarGens.PBLUFF;
+				}
+				case "PBOX":
+				{
+					return CarGens.PBOX;
+				}
 				case "PROCOB":
 				{
 					return CarGens.PROCOB;
 				}
-				case "HARMO":
+				case "PROL":
 				{
-					return CarGens.HARMO;
+					return CarGens.PROL;
+				}
+				case "RANCHO":
+				{
+					return CarGens.RANCHO;
+				}
+				case "RGLEN":
+				{
+					return CarGens.RGLEN;
+				}
+				case "RICHM":
+				{
+					return CarGens.RICHM;
+				}
+				case "ROCKF":
+				{
+					return CarGens.ROCKF;
+				}
+				case "RTRAK":
+				{
+					return CarGens.RTRAK;
+				}
+				case "SanAnd":
+				{
+					if (supportCayoPerico && IsPlayerInCayoPerico()) return CarGens.CAYO;
+					else return CarGens.SanAnd;
+				}
+				case "SANCHIA":
+				{
+					return CarGens.SANCHIA;
 				}
 				case "SANDY":
 				{
 					return CarGens.SANDY;
 				}
-				case "ZANCUDO":
+				case "SKID":
 				{
-					return CarGens.ZANCUDO;
+					return CarGens.SKID;
 				}
 				case "SLAB":
 				{
 					return CarGens.SLAB;
 				}
-				case "NCHU":
+				case "STAD":
 				{
-					return CarGens.NCHU;
+					return CarGens.STAD;
 				}
-				case "GRAPES":
+				case "STRAW":
 				{
-					return CarGens.GRAPES;
+					return CarGens.STRAW;
 				}
-				case "MTGORDO":
+				case "TATAMO":
 				{
-					return CarGens.MTGORDO;
+					return CarGens.TATAMO;
 				}
-				case "MTCHIL":
+				case "TERMINA":
 				{
-					return CarGens.MTCHIL;
+					return CarGens.TERMINA;
 				}
-				case "GALFISH":
+				case "TEXTI":
 				{
-					return CarGens.GALFISH;
+					return CarGens.TEXTI;
 				}
-				case "LAGO":
+				case "TONGVAH":
 				{
-					return CarGens.LAGO;
+					return CarGens.TONGVAH;
 				}
-				case "ARMYB":
+				case "TONGVAV":
 				{
-					return CarGens.ARMYB;
+					return CarGens.TONGVAV;
 				}
-				case "BURTON":
+				case "VCANA":
 				{
-					return CarGens.BURTON;
+					return CarGens.VCANA;
+				}
+				case "VESP":
+				{
+					return CarGens.VESP;
+				}
+				case "WINDF":
+				{
+					return CarGens.WINDF;
+				}
+				case "WVINE":
+				{
+					return CarGens.WVINE;
+				}
+				case "ZANCUDO":
+				{
+					return CarGens.ZANCUDO;
+				}
+				case "ZP_ORT":
+				{
+					return CarGens.ZP_ORT;
+				}
+				case "ZQ_UAR":
+				{
+					return CarGens.ZQ_UAR;
 				}
 	
 				default:
@@ -1349,6 +1377,15 @@ namespace Added_Traffic_Redux
 		{
 			Vector3 pos = Game.Player.Character.Position;
 			return GTA.Native.Function.Call<string>(Hash.GET_NAME_OF_ZONE, pos.X, pos.Y, pos.Z);
+		}
+
+		public static bool IsPlayerInCayoPerico()
+		{
+			Vector3 playerPos = Game.Player.Character.Position;
+
+			// Player is not in North Yankton and is within the bounds of Cayo Perico
+			if (GetPlayerZone() != "PROL" && (Enumerable.Range(3705, 5749).Contains((int)playerPos.X) && Enumerable.Range(-6142, 5749).Contains((int)playerPos.Y))) return true;
+			else return false;
 		}
 
 		public static void ClearVehicles(this Vehicle[] spawnVehicles)
