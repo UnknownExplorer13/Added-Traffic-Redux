@@ -141,8 +141,8 @@ namespace Added_Traffic_Redux
 					}
 					UI.Notify($"New entry saved for {zone2}");
 
-					// Set back to SanAnd if in Cayo Perico
-					if (InCayoPerico) zone2 = "SanAnd";
+					// Set back to SANAND if in Cayo Perico
+					if (InCayoPerico) zone2 = "SANAND";
 				}
 				else UI.Notify("Must be in a vehicle to create a CarGen entry");
 			}

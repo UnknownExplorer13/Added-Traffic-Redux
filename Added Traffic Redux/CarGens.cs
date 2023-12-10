@@ -1643,7 +1643,7 @@ namespace Added_Traffic_Redux
 			new Vector5(new Vector3(791.5974f, 1292.006f, 359.6785f), new Vector2(-3.093713f, 3.927964f))
 		};
 
-		public static List<Vector5> golf = new List<Vector5>
+		public static List<Vector5> GOLF = new List<Vector5>
 		{
 			new Vector5(new Vector3(-925.9079f, -62.76672f, 39.40515f), new Vector2(3.379008f, -4.951476f)),
 			new Vector5(new Vector3(-929.7399f, -57.1185f, 40.06186f), new Vector2(3.379008f, -4.951476f)),
@@ -8884,7 +8884,7 @@ namespace Added_Traffic_Redux
 			new Vector5(new Vector3(-3052.393f, 121.7458f, 12.83729f), new Vector2(6.995595f, -0.2479687f))
 		};
 
-		public static List<Vector5> SanAnd = new List<Vector5>
+		public static List<Vector5> SANAND = new List<Vector5>
 		{
 			new Vector5(new Vector3(-1467.185f, -893.0515f, 10.42074f), new Vector2(4.543736f, -2.078851f)),
 			new Vector5(new Vector3(-1463.738f, -880.4764f, 10.93251f), new Vector2(-5.246364f, 2.227632f)),

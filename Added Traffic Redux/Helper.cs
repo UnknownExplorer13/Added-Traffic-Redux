@@ -35,7 +35,7 @@ namespace Added_Traffic_Redux
 		public static bool debugText;
 		public static bool enableUpgrade = true;
 		public static bool randomizeWheels = true;
-		public static bool randomizeColor = true;
+		public static bool randomizeColor = false;
 		public static bool enableNeon = true;
 		public static int upgradeChance = 20;
 		public static Vehicles vehicles;
@@ -184,7 +184,7 @@ namespace Added_Traffic_Redux
 
 							veh.Delete();
 
-							if (!randomizeColor) newveh.PaintVehicle();
+							if (randomizeColor) newveh.PaintVehicle();
 							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
@@ -298,7 +298,7 @@ namespace Added_Traffic_Redux
 
 							veh.Delete();
 
-							if (!randomizeColor) newveh.PaintVehicle();
+							if (randomizeColor) newveh.PaintVehicle();
 							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
@@ -398,7 +398,7 @@ namespace Added_Traffic_Redux
 
 							veh.Delete();
 
-							if (!randomizeColor) newveh.PaintVehicle();
+							if (randomizeColor) newveh.PaintVehicle();
 							if (enableUpgrade && !noUpgradeClasses.Contains(newveh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 							{
 								rdMod = new Random();
@@ -523,7 +523,7 @@ namespace Added_Traffic_Redux
 				veh.IsPersistent = false;
 				veh.SetVehicleIsSpawnByMod();
 
-				if (!randomizeColor) veh.PaintVehicle();
+				if (randomizeColor) veh.PaintVehicle();
 				if (enableUpgrade && !noUpgradeClasses.Contains(veh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 				{
 					rdMod = new Random();
@@ -628,7 +628,7 @@ namespace Added_Traffic_Redux
 				veh.NeedsToBeHotwired = true;
 				veh.SetVehicleIsSpawnByMod();
 
-				if (!randomizeColor) veh.PaintVehicle();
+				if (randomizeColor) veh.PaintVehicle();
 				if (enableUpgrade && !noUpgradeClasses.Contains(veh.ClassType.ToString()) && GetPlayerZone() != "ARMYB")
 				{
 					rdMod = new Random();
@@ -842,7 +842,7 @@ namespace Added_Traffic_Redux
 				case "DTVINE":
 				case "EAST_V":
 				case "GALLI":
-				case "golf":
+				case "GOLF":
 				case "HAWICK":
 				case "HORS":
 				case "MIRR":
@@ -898,7 +898,7 @@ namespace Added_Traffic_Redux
 				case "NOOSE":
 				case "PALHIGH":
 				case "PBLUFF":
-				case "SanAnd":
+				case "SANAND":
 				case "STAD":
 				case "TATAMO":
 				case "TONGVAH":
@@ -1132,9 +1132,9 @@ namespace Added_Traffic_Redux
 				{
 					return CarGens.GALLI;
 				}
-				case "golf":
+				case "GOLF":
 				{
-					return CarGens.golf;
+					return CarGens.GOLF;
 				}
 				case "GRAPES":
 				{
@@ -1276,10 +1276,10 @@ namespace Added_Traffic_Redux
 				{
 					return CarGens.RTRAK;
 				}
-				case "SanAnd":
+				case "SANAND":
 				{
 					if (supportCayoPerico && IsPlayerInCayoPerico()) return CarGens.CAYO;
-					else return CarGens.SanAnd;
+					else return CarGens.SANAND;
 				}
 				case "SANCHIA":
 				{
