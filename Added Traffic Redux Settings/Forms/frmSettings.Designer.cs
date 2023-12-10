@@ -1015,14 +1015,14 @@
             this.llblWeb.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.llblWeb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.llblWeb.AutoSize = true;
-            this.llblWeb.LinkArea = new System.Windows.Forms.LinkArea(0, 9);
+            this.llblWeb.LinkArea = new System.Windows.Forms.LinkArea(0, 20);
             this.llblWeb.LinkColor = System.Drawing.Color.DodgerBlue;
             this.llblWeb.Location = new System.Drawing.Point(12, 530);
             this.llblWeb.Name = "llblWeb";
             this.llblWeb.Size = new System.Drawing.Size(65, 15);
             this.llblWeb.TabIndex = 42;
             this.llblWeb.TabStop = true;
-            this.llblWeb.Text = "My GitHub";
+            this.llblWeb.Text = "By UnknownExplorer13";
             this.llblWeb.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.llblWeb.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblWeb_LinkClicked);
             // 
