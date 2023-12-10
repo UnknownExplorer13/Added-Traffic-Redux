@@ -428,7 +428,7 @@ namespace Added_Traffic_Redux
 	public class mpHalloweenVehicleList
 	{
 		// public static List<string> Downtown = new List<string> {};
-		public static List<string> Vinewood = new List<string> { "btype2" };
+		public static List<string> Vinewood = new List<string> { "btype2", "lurcher" };
 		// public static List<string> SouthLosSantos = new List<string> {};
 		// public static List<string> PortOfSouthLosSantos = new List<string> {};
 		// public static List<string> EastLosSantos = new List<string> {};
@@ -784,22 +784,20 @@ namespace Added_Traffic_Redux
 		// public static List<string> CayoPerico = new List<string> {};
 	}
 
-	///////////////////////////////////
-
 	// Los Santos Summer Special (mpSum) - August 11, 2020
 	// Vehicle models: club|coquette4|dukes3|gauntlet5|glendale2|landstalker2|manana2|openwheel1|openwheel2|penumbra2|peyote3|seminole2|tigon|yosemite3|youga3
 	public class mpSumVehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
-		// public static List<string> SouthLosSantos = new List<string> {};
-		// public static List<string> PortOfSouthLosSantos = new List<string> {};
-		// public static List<string> EastLosSantos = new List<string> {};
+		public static List<string> Downtown = new List<string> { "club", "gauntlet5", "glendale2", "landstalker2", "manana2", "penumbra2" };
+		public static List<string> Vinewood = new List<string> { "coquette4", "glendale2", "landstalker2", "manana2", "tigon" };
+		public static List<string> SouthLosSantos = new List<string> { "peyote3",  };
+		public static List<string> PortOfSouthLosSantos = new List<string> { "youga3" };
+		public static List<string> EastLosSantos = new List<string> { "youga3" };
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
-		// public static List<string> BlaineCounty = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "club", "gauntlet5", "glendale2", "landstalker2", "manana2", "penumbra2" };
+		public static List<string> GrandSenoraDesert = new List<string> { "seminole2", "yosemite3" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "gauntlet5", "seminole2", "yosemite3" };
+		public static List<string> BlaineCounty = new List<string> { "seminole2", "yosemite3" };
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
 		// public static List<string> CayoPerico = new List<string> {};
@@ -809,17 +807,17 @@ namespace Added_Traffic_Redux
 	// Vehicle models: alkonost|annihilator2|avisa|brioso2|dinghy5|italirsx|kosatka|longfin|manchez2|patrolboat|seasparrow2|seasparrow3|slamtruck|squaddie|toreador|verus|vetir|veto|veto2|weevil|winky
 	public class mpHeist4VehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
+		public static List<string> Downtown = new List<string> { "brioso2", "weevil" };
+		public static List<string> Vinewood = new List<string> { "italirsx", "slamtruck", "toreador", "weevil" };
 		// public static List<string> SouthLosSantos = new List<string> {};
 		// public static List<string> PortOfSouthLosSantos = new List<string> {};
 		// public static List<string> EastLosSantos = new List<string> {};
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
-		// public static List<string> BlaineCounty = new List<string> {};
-		// public static List<string> FortZancudo = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "weevil" };
+		public static List<string> GrandSenoraDesert = new List<string> { "brioso2", "manchez2", "verus" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "brioso2", "manchez2", "verus" };
+		public static List<string> BlaineCounty = new List<string> { "manchez2", "verus",  };
+		public static List<string> FortZancudo = new List<string> { "squaddie", "vetir", "winky" };
 		// public static List<string> NorthYankton = new List<string> {};
 		public static List<string> CayoPerico = new List<string> { "manchez2", "squaddie", "verus", "vetir", "winky" };
 	}
@@ -828,15 +826,15 @@ namespace Added_Traffic_Redux
 	// Vehicle models: calico|comet6|cypher|dominator7|dominator8|euros|freightcar2|futo2|growler|jester4|previon|remus|rt3000|sultan3|tailgater2|vectre|warrener2|zr350
 	public class mpTunerVehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
+		public static List<string> Downtown = new List<string> { "dominator7", "dominator8", "futo2", "previon", "remus", "sultan3", "warrener2", "zr350" };
+		public static List<string> Vinewood = new List<string> { "comet6", "dominator8", "euros", "growler", "jester4", "rt3000", "tailgater2", "vectre" };
 		// public static List<string> SouthLosSantos = new List<string> {};
 		// public static List<string> PortOfSouthLosSantos = new List<string> {};
 		// public static List<string> EastLosSantos = new List<string> {};
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "calico", "comet6", "cypher", "dominator7", "dominator8", "futo2", "growler", "previon", "remus", "rt3000", "sultan3", "tailgater2", "vectre", "warrener2", "zr350" };
+		public static List<string> GrandSenoraDesert = new List<string> { "warrener2" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "warrener2" };
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
@@ -847,15 +845,15 @@ namespace Added_Traffic_Redux
 	// Vehicle models: astron|baller7|buffalo4|champion|cinquemila|comet7|deity|granger2|ignus|iwagen|jubilee|mule5|patriot3|reever|shinobi|youga4|zeno
 	public class mpSecurityVehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
+		public static List<string> Downtown = new List<string> { "baller7", "deity", "granger2", "iwagen", "jubilee", "reever", "shinobi" };
+		public static List<string> Vinewood = new List<string> { "baller7", "buffalo4", "champion", "cinquemila", "comet7", "ignus", "zeno" };
 		// public static List<string> SouthLosSantos = new List<string> {};
-		// public static List<string> PortOfSouthLosSantos = new List<string> {};
-		// public static List<string> EastLosSantos = new List<string> {};
+		public static List<string> PortOfSouthLosSantos = new List<string> { "mule5" };
+		public static List<string> EastLosSantos = new List<string> { "mule5" };
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "astron", "baller7", "buffalo4", "cinquemila", "comet7", "deity", "granger2", "iwagen", "jubilee", "reever", "shinobi" };
+		public static List<string> GrandSenoraDesert = new List<string> { "patriot3" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "granger2", "patriot3", "reever", "shinobi" };
 		// public static List<string> BlaineCounty = new List<string> {};
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
@@ -885,16 +883,16 @@ namespace Added_Traffic_Redux
 	// Vehicle models: brioso3|conada|corsita|draugur|greenwood|kanjosj|lm87|omnisegt|postlude|rhinehart|ruiner4|sentinel4|sm722|tenf2|tenf|torero2|vigero2|weevil2
 	public class mpSum2VehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
-		// public static List<string> SouthLosSantos = new List<string> {};
+		public static List<string> Downtown = new List<string> { "brioso3", "kanjosj", "postlude", "rhinehart", "sentinel4" };
+		public static List<string> Vinewood = new List<string> { "corsita", "lm87", "omnisegt", "ruiner4", "sm722", "tenf2", "tenf", "torero2", "vigero2", "weevil2" };
+		public static List<string> SouthLosSantos = new List<string> { "greenwood" };
 		// public static List<string> PortOfSouthLosSantos = new List<string> {};
 		// public static List<string> EastLosSantos = new List<string> {};
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
-		// public static List<string> BlaineCounty = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "kanjosj", "omnisegt", "postlude", "rhinehart", "ruiner4", "vigero2" };
+		public static List<string> GrandSenoraDesert = new List<string> { "brioso3", "draugur", "sentinel4", "weevil2" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "brioso3", "draugur", "sentinel4", "weevil2" };
+		public static List<string> BlaineCounty = new List<string> { "weevil2" };
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
 		// public static List<string> CayoPerico = new List<string> {};
@@ -904,17 +902,17 @@ namespace Added_Traffic_Redux
 	// Vehicle models: boor|brickade2|broadway|cargoplane2|entity3|eudora|everon2|issi8|journey2|manchez3|panthere|powersurge|r300|surfer3|tahoma|tulip2|virtue
 	public class mpChristmas3VehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
-		// public static List<string> SouthLosSantos = new List<string> {};
+		public static List<string> Downtown = new List<string> { "boor", "everon2", "panthere", "powersurge", "tahoma", "tulip2" };
+		public static List<string> Vinewood = new List<string> { "broadway", "entity3", "r300", "virtue" };
+		public static List<string> SouthLosSantos = new List<string> { "eudora" };
 		// public static List<string> PortOfSouthLosSantos = new List<string> {};
 		// public static List<string> EastLosSantos = new List<string> {};
-		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
-		// public static List<string> BlaineCounty = new List<string> {};
-		// public static List<string> FortZancudo = new List<string> {};
+		public static List<string> Vespucci = new List<string> { "surfer3" };
+		public static List<string> LosSantos = new List<string> { "panthere", "powersurge", "r300" };
+		public static List<string> GrandSenoraDesert = new List<string> { "boor", "issi8", "journey2", "manchez3" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "boor", "everon2", "issi8", "journey2", "manchez3", "powersurge", "surfer3" };
+		public static List<string> BlaineCounty = new List<string> { "journey2", "manchez3" };
+		public static List<string> FortZancudo = new List<string> { "brickade2" };
 		// public static List<string> NorthYankton = new List<string> {};
 		// public static List<string> CayoPerico = new List<string> {};
 	}
@@ -923,16 +921,16 @@ namespace Added_Traffic_Redux
 	// Vehicle models: 216cstreamer|avenger3|avenger4|brigham|buffalo5|clique2|conada2|coureur|gauntlet6|inductor2|inductor|l35|monstrociti|raiju|ratel|speedo5|stingertt|streamer216
 	public class mp2023_01VehicleList
 	{
-		// public static List<string> Downtown = new List<string> {};
-		// public static List<string> Vinewood = new List<string> {};
+		public static List<string> Downtown = new List<string> { "coureur", "gauntlet6", "l35" };
+		public static List<string> Vinewood = new List<string> { "brigham", "buffalo5", "clique2", "stingertt" };
 		// public static List<string> SouthLosSantos = new List<string> {};
-		// public static List<string> PortOfSouthLosSantos = new List<string> {};
-		// public static List<string> EastLosSantos = new List<string> {};
+		public static List<string> PortOfSouthLosSantos = new List<string> { "speedo5" };
+		public static List<string> EastLosSantos = new List<string> { "speedo5" };
 		// public static List<string> Vespucci = new List<string> {};
-		// public static List<string> LosSantos = new List<string> {};
-		// public static List<string> GrandSenoraDesert = new List<string> {};
-		// public static List<string> SanChianskiMountainRange = new List<string> {};
-		// public static List<string> BlaineCounty = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "buffalo5", "coureur", "gauntlet6", "stingertt" };
+		public static List<string> GrandSenoraDesert = new List<string> { "l35", "ratel" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "coureur", "gauntlet6", "l35", "monstrociti", "ratel" };
+		public static List<string> BlaineCounty = new List<string> { "l35" };
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
 		// public static List<string> CayoPerico = new List<string> {};
