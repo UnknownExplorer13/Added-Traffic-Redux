@@ -19,7 +19,7 @@ namespace Added_Traffic_Redux_Settings
 																   typeof(mpChristmas2018VehicleList), typeof(mpVinewoodVehicleList), typeof(mpHeist3VehicleList),
 																   typeof(mpSumVehicleList), typeof(mpHeist4VehicleList), typeof(mpTunerVehicleList),
 																   typeof(mpSecurityVehicleList), typeof(mpG9ECVehicleList), typeof(mpSum2VehicleList),
-																   typeof(mpChristmas3VehicleList), typeof(mp2023_01VehicleList) };
+																   typeof(mpChristmas3VehicleList), typeof(mp2023_01VehicleList), typeof(mp2023_02VehicleList) };
 
 		public static List<string> DowntownVehList()
 		{
@@ -931,6 +931,25 @@ namespace Added_Traffic_Redux_Settings
 		public static List<string> GrandSenoraDesert = new List<string> { "l35", "ratel" };
 		public static List<string> SanChianskiMountainRange = new List<string> { "coureur", "gauntlet6", "l35", "monstrociti", "ratel" };
 		public static List<string> BlaineCounty = new List<string> { "l35" };
+		// public static List<string> FortZancudo = new List<string> {};
+		// public static List<string> NorthYankton = new List<string> {};
+		// public static List<string> CayoPerico = new List<string> {};
+	}
+
+	// The Chop Shop (mp2023_02) - December 12, 2023
+	// Vehicle models: aleutian|asterope2|baller8|benson2|boattrailer2|boattrailer3|boxville6|cavalcade3|dominator9|dorado|drifteuros|driftfr36|driftfuto|driftjester|driftremus|drifttampa|driftyosemite|driftzr350|fr36|freight2|impaler5|impaler6|phantom4|polgauntlet|police5|terminus|towtruck3|towtruck4|trailers5|turismo3|tvtrailer2|vigero3|vivanite
+	public class mp2023_02VehicleList
+	{
+		public static List<string> Downtown = new List<string> { "aleutian", "asterope2", "baller8", "cavalcade3", "driftfr36", "driftfuto", "driftremus", "drifttampa", "driftyosemite", "driftzr350", "impaler5", "impaler6" };
+		public static List<string> Vinewood = new List<string> { "dominator9", "drifteuros", "driftjester", "turismo3", "vigero3" };
+		// public static List<string> SouthLosSantos = new List<string> {};
+		// public static List<string> PortOfSouthLosSantos = new List<string> {};
+		public static List<string> EastLosSantos = new List<string> { "benson2", "boxville6" };
+		// public static List<string> Vespucci = new List<string> {};
+		public static List<string> LosSantos = new List<string> { "aleutian", "asterope2", "baller8", "cavalcade3", "dominator9", "drifteuros", "driftfr36", "driftjester", "driftzr350", "fr36", "vivanite" };
+		public static List<string> GrandSenoraDesert = new List<string> { "dorado", "terminus", "towtruck3" };
+		public static List<string> SanChianskiMountainRange = new List<string> { "dorado", "drifttampa", "driftyosemite", "terminus", "towtruck4" };
+		public static List<string> BlaineCounty = new List<string> { "dorado" };
 		// public static List<string> FortZancudo = new List<string> {};
 		// public static List<string> NorthYankton = new List<string> {};
 		// public static List<string> CayoPerico = new List<string> {};
