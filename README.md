@@ -12,7 +12,7 @@ An updated version of [Added Traffic](https://www.gta5-mods.com/scripts/dlc-vehi
 <h2>Installing</h2>
 </div>
 
-Get the [latest release](https://github.com/UnknownExplorer13/AddedTraffic-Redux/releases/latest) from the releases page and put the files in the scripts folder in your GTA V root directory.
+Get the [latest release](https://github.com/UnknownExplorer13/Added-Traffic-Redux/releases/latest) from the releases page and put the files in the scripts folder in your GTA V root directory.
 
 <div align="center">
 <h2>Credit</h2>
