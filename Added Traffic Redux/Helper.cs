@@ -107,7 +107,7 @@ namespace Added_Traffic_Redux
 
 		public static void SetAsCop(this Ped ped)
 		{
-			GTA.Native.Function.Call(Hash.SET_PED_AS_COP, ped, true);
+			Function.Call(Hash.SET_PED_AS_COP, ped, true);
 		}
 
 		public static void SwapVehicleHaveDriverOffScreen()
@@ -477,7 +477,7 @@ namespace Added_Traffic_Redux
 				float roadHeading = 0f;
 				OutputArgument tempCoords = new OutputArgument(), tempRoadHeading = new OutputArgument();
 
-				GTA.Native.Function.Call<Vector3>(Hash.GET_CLOSEST_VEHICLE_NODE_WITH_HEADING, coords.X, coords.Y, coords.Z, tempCoords, tempRoadHeading, (int)roadType, 3.0f, 0);
+				Function.Call<Vector3>(Hash.GET_CLOSEST_VEHICLE_NODE_WITH_HEADING, coords.X, coords.Y, coords.Z, tempCoords, tempRoadHeading, (int)roadType, 3.0f, 0);
 				closestVehicleNodeCoords = tempCoords.GetResult<Vector3>();
 				roadHeading = tempRoadHeading.GetResult<float>();
 
@@ -802,7 +802,7 @@ namespace Added_Traffic_Redux
 
 		public static void ForwardSpeed(this Vehicle veh, float value)
 		{
-			GTA.Native.Function.Call(Hash.SET_VEHICLE_FORWARD_SPEED, veh, value);
+			Function.Call(Hash.SET_VEHICLE_FORWARD_SPEED, veh, value);
 		}
 
 		public enum eZone
@@ -825,7 +825,7 @@ namespace Added_Traffic_Redux
 		public static List<string> GetPlayerZoneVehicleList()
 		{
 			var pp = Game.Player.Character.Position;
-			var zone = GTA.Native.Function.Call<string>(Hash.GET_NAME_OF_ZONE, pp.X, pp.Y, pp.Z);
+			var zone = Function.Call<string>(Hash.GET_NAME_OF_ZONE, pp.X, pp.Y, pp.Z);
 			switch (zone)
 			{
 				case "DOWNT":
@@ -993,19 +993,19 @@ namespace Added_Traffic_Redux
 
 		public static bool IsOnRoad(this Vehicle veh)
 		{
-			return GTA.Native.Function.Call<bool>(Hash.IS_POINT_ON_ROAD, veh.Position.X, veh.Position.Y, veh.Position.Z, veh);
+			return Function.Call<bool>(Hash.IS_POINT_ON_ROAD, veh.Position.X, veh.Position.Y, veh.Position.Z, veh);
 		}
 
 		public static Tuple<int, int> GetVehicleNodeProperties(this Vector3 pos)
 		{
 			OutputArgument outD = new OutputArgument(), outF = new OutputArgument();
-			GTA.Native.Function.Call<bool>(Hash.GET_VEHICLE_NODE_PROPERTIES, pos.X, pos.Y, pos.Z, outD, outF);
+			Function.Call<bool>(Hash.GET_VEHICLE_NODE_PROPERTIES, pos.X, pos.Y, pos.Z, outD, outF);
 			return new Tuple<int, int>(outD.GetResult<int>(), outF.GetResult<int>());
 		}
 
 		public static Point GetSafeZoneSize()
 		{
-			float t = GTA.Native.Function.Call<float>(Hash.GET_SAFE_ZONE_SIZE);
+			float t = Function.Call<float>(Hash.GET_SAFE_ZONE_SIZE);
 			double g = Math.Round((double)t, 2);
 			g = g * 100f - 90f;
 			g = 10f - g;
@@ -1020,7 +1020,7 @@ namespace Added_Traffic_Redux
 
 		public static List<Vector5> GetParkingSpotByZone(this Vector3 pp)
 		{
-			var zone = GTA.Native.Function.Call<string>(Hash.GET_NAME_OF_ZONE, pp.X, pp.Y, pp.Z);
+			var zone = Function.Call<string>(Hash.GET_NAME_OF_ZONE, pp.X, pp.Y, pp.Z);
 			switch (zone)
 			{
 				case "DOWNT":
@@ -1370,13 +1370,13 @@ namespace Added_Traffic_Redux
 	
 		public static bool IsPositionOccupied(this Vector3 pos, float range)
 		{
-			return GTA.Native.Function.Call<bool>(Hash.IS_POSITION_OCCUPIED, pos.X, pos.Y, pos.Z, range, false, true, false, false, false, 0, false);
+			return Function.Call<bool>(Hash.IS_POSITION_OCCUPIED, pos.X, pos.Y, pos.Z, range, false, true, false, false, false, 0, false);
 		}
 
 		public static string GetPlayerZone()
 		{
 			Vector3 pos = Game.Player.Character.Position;
-			return GTA.Native.Function.Call<string>(Hash.GET_NAME_OF_ZONE, pos.X, pos.Y, pos.Z);
+			return Function.Call<string>(Hash.GET_NAME_OF_ZONE, pos.X, pos.Y, pos.Z);
 		}
 
 		public static bool IsPlayerInCayoPerico()
