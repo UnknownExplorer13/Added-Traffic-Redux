@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using GTA;
-using GTA.Native;
 
 namespace Added_Traffic_Redux
 {

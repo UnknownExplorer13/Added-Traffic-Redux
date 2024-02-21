@@ -4,8 +4,6 @@ using System.Reflection;
 using System.Collections.Generic;
 using GTA;
 using GTA.Math;
-using GTA.Native;
-using System.Diagnostics;
 
 namespace Added_Traffic_Redux
 {
